@@ -100,13 +100,81 @@ def import_database_from_csv_backup():
 # TODO - Criar um dicionário com as principais características de um
 # determinado item.
 item = {
-    'atributo1': 'valor',
-    'atributo2': 'valor',
-    'atributo3': 'valor',
-    'atributo4': 'valor',
-    'atributo5': 'valor',
-    'atributo6': 'valor'
+    'code': '660629',
+    'full_description': 'CAPACITOR CERÂMICO SMD 0603 150pF 50V 5% C0G (PN: GRM1885C1H151JA01J) (PN: CL10C151JB8NFNC) (PN: C0603C151J5GAC)',
+    'bom_description': 'CAPACITOR CERÂMICO SMD 0603 150pF 50V 5% C0G',
+    'category': 'CAPACITOR',
+    'cap_type': 'CERÂMICO',
+    'mounting': 'SMD',
+    'encap': '0603',
+    'value': '150pF',
+    'voltage': '50V',
+    'current': '0.1A',
+    'tolerance': '5%',
+    'cap_dieletric': 'C0G',
+    'quantity': 2000,
+    'min_quantity': 100,
+    'alert_quantity': 500,
+    'alert_quantity': 500,
+    'pns': [
+        'GRM1885C1H151JA01J',
+        'CL10C151JB8NFNC',
+        'C0603C151J5GAC',
+    ],
+    'location': {
+        'aisle': '1',
+        'shelf': '5',
+        'box': '4'
+    },
+    'tax': {
+        'ncm': '8541.50.20',
+        'average_cost': 0.52,
+        'total_cost': 5.2,
+        'suppliers': [],
+        'purchases_history': [
+            {
+                'input_data': '21/04/2022',
+                'supplier': 'Mouser',
+                'nf': '123456',
+                'quantity': 1000,
+                'unit_price': 0.25,
+                'total_price': 25.00,
+            },
+        ]
+    },
 }
+
+category = ['TRANSISTOR', 'REGULADOR DE TENSÃO', 'RESISTOR', 'CAPACITOR',
+            'INDUTOR', 'DIODO', 'CRISTAL OSCILADOR', 'FERRITE BEAD', 'BUZZER', ]
+mounting_type = ['SMD', 'PTH']
+trans_type = ['BJT', 'MOSFET', 'JFET', 'OPTOACOPLADOR', ]
+cap_dieletric = ['X5R', 'X7R', 'C0G', 'Y5V', 'X7S', 'Y5U', ]
+cap_type = ['CERÂMICO', 'DE FILME', 'DE POLIESTER',
+            'ELETROLÍTICO DE ALUMÍNIO', 'TÂNTALO', 'SAFETY', ]
+encap_simple = ['0402', '0603', '0805', '7045', '1206', '1210', '2512', ]
+power_rating = ['1/16W', '1/10W', '1/8W', '1/4W',
+                '1/3W', '1/2W', '1W', '2W', '3W', '4W', '5W', ]
+res_type = ['SMD', 'PTH DE FIO', 'PTH METAL-OXIDE', ]
+tolerance = ['0.01%', '0.02%', '0.1%', '0.5%', '1%', '5%', '10%', '20%', ]
+color = ['VERDE', 'AZUL', 'BRANCO', 'VERMELHO', ]
+encap_complex = [
+    '0603', '3MM', 'D2-PAK', 'D-FLAT', 'DO-201D', 'DO-214AA', 'DO-214AC',
+    'DO-220AA', 'HSOP-8', 'LL-34', 'MSOP-10', 'SC70-6', 'SMD-4 OPTION9',
+    'SO-8', 'SOD123', 'SOD-323F-2', 'SOD-80C', 'SOIC-14', 'SOIC-4', 'SOIC-8',
+    'SOP-16', 'SOT-223-3', 'SOT23', 'SOT23-5', 'SOT23-8', 'TO-220', 'TO-220AB',
+    'TO-225-3', 'TO-252', 'TSOP-6', 'TSSOP-14', 'VQFN-40', 'VSSOP-10', ]
+diode_type = [
+    'LED', 'PONTE RETIFICADORA', 'RETIFICADOR', 'SCHOTTKY', 'ZENER',
+    'DE SINAL', 'ZENER AJUSTÁVEL', ]
+trans_canal = ['N', 'P', 'NPN', 'PNP', ]
+ci_type = [
+    'AMPLIFICADOR', 'CONVERSOR AC/DC', 'CONVERSOR DC/DC', 'AFE', 'LED DRIVER',
+    'MEMORIA', 'MICROCONTROLADOR', 'CONVERSOR DAC', 'CONVERSOR ADC',
+    'ISOLADOR DIGITAL E DC/DC', ]
+amplifier_type = ['DIFERENCIAL', 'OPERACIONAL', 'DE ÁUDIO', ]
+voltage_regulator_type = [
+    'BOOST', 'BUCK BOOST', 'CHARGE PUMP', 'FLYBACK', 'LDO', 'LINEAR',
+    'STEP-DOWN', 'SWITCHING CONTROLLER', ]
 
 
 # TODO - Função para adicionar PNs manualmente.
