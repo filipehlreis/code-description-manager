@@ -221,6 +221,11 @@ def is_description_standard():
     pass
 
 
+# This is the begining of the regular expressions
+# https://regex101.com/r/ILJViS/1
+
+
+
 def is_description_in_database():
     pass
 
