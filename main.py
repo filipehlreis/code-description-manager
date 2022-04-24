@@ -280,22 +280,26 @@ def create_observation_about_item():
 # TODO - Em uma aba/pagina do software, deve mostrar uma tabela listando todos
 # os itens cadastrados no banco de dados.
 # --> Sera elaborado no PyQT.
+# ---> Banco de Dados
 
 
 # TODO - Em uma aba/pagina do software, deve mostrar uma tabela listando todos
 # os itens importados da planilha CSV do OMIE e que estão aguardando a
 # padronização da descrição e inserção no banco de dados.
 # --> Sera elaborado no PyQT.
+# ---> Aguardando Padronização
 
 
 # TODO - Em uma aba/pagina do software, deve mostrar opções de determinar a
 # previsão de quantidade de placas a serem montadas nos próximos meses.
 # --> Sera elaborado no PyQT.
+# ---> Previsão de consumo
 
 
 # TODO - Em uma aba/pagina, deve mostrar uma tabela mostrando todas as listas
 # de materiais já montadas.
 # --> Sera elaborado no PyQT.
+# ---> Listas de Materiais
 
 
 # TODO - Quando clicar em uma lista de materiais, deve abrir uma janela PopUp
@@ -314,6 +318,7 @@ def create_observation_about_item():
 # TODO - Em uma aba/pagina do software, deve conter uma tabela/imagem
 # mostrando informações sobre todos os alimentadores da Pick&Place.
 # --> Sera elaborado no PyQT.
+# ---> Pick&Place.
 
 
 # TODO - Na aba/pagina referente a Pick&Place, deve possuir informações como:
