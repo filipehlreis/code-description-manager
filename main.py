@@ -7,6 +7,9 @@
 #                                    APIs                                    #
 # ########################################################################## #
 # TODO - Obter resposta de sucesso vinda da API da Mouser e Digikey.
+import os
+
+
 def get_info_about_pn():
     pass
 
@@ -225,7 +228,6 @@ def is_description_standard():
 # https://regex101.com/r/ILJViS/1
 
 
-
 def is_description_in_database():
     pass
 
@@ -441,7 +443,31 @@ def set_quantity_item_in_storage():
 # ########################################################################## #
 # TODO - Ler a planilha CSV oriunda do OMIE.
 def read_omie_sheet():
+    import PyPDF2
+    import pandas as pd
+
+    excel_file_dir = 'local_settings\compras,_estoque_e_producao_318635218276261.xlsx'
+    fileReader = pd.read_excel(excel_file_dir)
+    table_import = fileReader[1:]
+
+    print(table_import.columns)
+    # print(fileReader)
+
     pass
+
+
+# read_omie_sheet()
+"""
+This file was created so I could config the virtual enviromment and install
+what I would need for the course.
+"""
+
+os.system('jupyter notebook')
+
+
+# TODO - Utilizar Pandas para realizar a filtragem necessaria para o arquivo
+# excel, e separar em algumas tabelas, como: já padronizados, faltando
+# informacoes, faltando padronizar, codigo incoerente e ativo.
 
 
 # TODO - Exportar uma planilha CSV possível de ser importada pelo OMIE.
