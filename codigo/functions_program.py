@@ -7,6 +7,8 @@
 #                                    APIs                                    #
 # ########################################################################## #
 # TODO - Obter resposta de sucesso vinda da API da Mouser e Digikey.
+import re
+import pandas as pd
 import os
 
 
@@ -441,11 +443,13 @@ def set_quantity_item_in_storage():
 # ########################################################################## #
 #                               CSV/PDF/EXCEL                                #
 # ########################################################################## #
+clean2 = pd.DataFrame()
+
+
 # TODO - Ler a planilha CSV oriunda do OMIE.
 def read_omie_sheet():
-    import pandas as pd
-    import re
-    print('OI')
+    global clean2
+    print('Iniciando import.')
     # import matplotlib.pyplot as plt
 
     excel_file_dir = 'local_settings\compras,_estoque_e_producao_318635218276261.xlsx'
@@ -463,8 +467,22 @@ def read_omie_sheet():
 
     clean2 = clean_df_data[clean_df_data['Código'].str.len() == 6]
     clean2 = clean2[clean2['Código'].str.match(regex)]
-    print('OI 2')
+
+    print('Import realizado com sucesso.')
+
     # pass
+
+
+# TODO - Exportar o arquivo CSV recem lido e tratado para o HD
+def export_excel_sheet_omie():
+    global clean2
+    if not clean2.empty:
+        print('Iniciando exportacao do arquivo excel.')
+        dir_to_save = 'input_output/database.xlsx'
+        clean2.to_excel(dir_to_save)
+        print('Arquivo exportado com sucesso.')
+    else:
+        print('vazio, necessario importar primeiro')
 
 
 # read_omie_sheet()
@@ -473,7 +491,7 @@ This file was created so I could config the virtual enviromment and install
 what I would need for the course.
 """
 
-os.system('jupyter notebook')
+# os.system('jupyter notebook')
 
 
 # TODO - Utilizar Pandas para realizar a filtragem necessaria para o arquivo
