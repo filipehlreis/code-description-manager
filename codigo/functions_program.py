@@ -449,7 +449,7 @@ clean2 = pd.DataFrame()
 # TODO - Ler a planilha CSV oriunda do OMIE.
 def read_omie_sheet():
     global clean2
-    print('Iniciando import.')
+    print('\nIniciando import.')
     # import matplotlib.pyplot as plt
 
     excel_file_dir = 'local_settings\compras,_estoque_e_producao_318635218276261.xlsx'
@@ -467,6 +467,17 @@ def read_omie_sheet():
 
     clean2 = clean_df_data[clean_df_data['Código'].str.len() == 6]
     clean2 = clean2[clean2['Código'].str.match(regex)]
+    clean2['Descrição Simplificada'] = ''
+    reorder_columns = [
+        'Situação', 'Descrição', 'Descrição Simplificada', 'Código',
+        'Família de Produto', 'Código NCM', 'Estoque Disponível', 'Unidade',
+        'Custo Médio Contábil', 'Estoque Mínimo', 'Peso Líquido', 'Peso Bruto',
+        'Altura', 'Largura', 'Profundidade', 'Inclusão', 'Última Alteração',
+        'Incluído por', 'Alterado por', ]
+    clean2 = clean2[reorder_columns]
+    clean2['Corredor'] = 0
+    clean2['Prateleira'] = 0
+    clean2['Caixa'] = 0
 
     print('Import realizado com sucesso.')
 
@@ -477,12 +488,12 @@ def read_omie_sheet():
 def export_excel_sheet_omie():
     global clean2
     if not clean2.empty:
-        print('Iniciando exportacao do arquivo excel.')
+        print('\nIniciando exportacao do arquivo excel.')
         dir_to_save = 'input_output/database.xlsx'
-        clean2.to_excel(dir_to_save)
-        print('Arquivo exportado com sucesso.')
+        clean2.to_excel(dir_to_save, index=False)
+        print('Arquivo exportado com sucesso.\n')
     else:
-        print('vazio, necessario importar primeiro')
+        print('\nVazio, necessário importar primeiro.')
 
 
 # read_omie_sheet()
