@@ -443,17 +443,28 @@ def set_quantity_item_in_storage():
 # ########################################################################## #
 # TODO - Ler a planilha CSV oriunda do OMIE.
 def read_omie_sheet():
-    import PyPDF2
     import pandas as pd
+    import re
+    print('OI')
+    # import matplotlib.pyplot as plt
 
     excel_file_dir = 'local_settings\compras,_estoque_e_producao_318635218276261.xlsx'
-    fileReader = pd.read_excel(excel_file_dir)
-    table_import = fileReader[1:]
+    df_data = pd.read_excel(excel_file_dir)
+    clean = df_data
+    col_subset_delete = [
+        'CEST', 'Código EAN (GTIN)', 'Preço Unitário de Venda',
+        'Marca', 'Dias de Garantia', 'Dias de Crossdocking',
+        'Cupom Fiscal (PDV)', 'Marketplace', 'Tipo do Item (Bloco K)',
+        'Origem da Mercadoria', 'Preço Tabelado (Pauta)',
+        'Produzido em Escala Relevante', 'CNPJ Fabricante', 'Características', ]
+    clean = clean.drop(axis=1, labels=col_subset_delete)
+    clean_df_data = clean
+    regex = re.compile(r'[5679]{1}[0-9]{5}')
 
-    print(table_import.columns)
-    # print(fileReader)
-
-    pass
+    clean2 = clean_df_data[clean_df_data['Código'].str.len() == 6]
+    clean2 = clean2[clean2['Código'].str.match(regex)]
+    print('OI 2')
+    # pass
 
 
 # read_omie_sheet()

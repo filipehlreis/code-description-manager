@@ -8,6 +8,7 @@
 # ########################################################################### #
 import sys
 import os
+from codigo.functions_program import read_omie_sheet
 # ########################################################################### #
 # IMPORT GUI GILE
 from ui_interface_22_modern_tutorial import *
@@ -69,6 +70,11 @@ class MainWindow(QMainWindow):
         # CLOSE NOTIFICATION MENU WIDGET
         self.ui.closeNotificationBtn.clicked.connect(
             lambda: self.ui.popupNotificationContainer.collapseMenu())
+
+        # BUTTONS
+        self.ui.importCsvOmieBtn.clicked.connect(
+            lambda: read_omie_sheet()
+        )
 
 
 # ########################################################################### #

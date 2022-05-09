@@ -1018,10 +1018,17 @@ border-radius: 10px;
              <item>
               <widget class="QCustomStackedWidget" name="mainPages">
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="homePage">
                 <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QPushButton" name="importCsvOmieBtn">
+                   <property name="text">
+                    <string>Importar CSV do OMIE</string>
+                   </property>
+                  </widget>
+                 </item>
                  <item>
                   <widget class="QLabel" name="label_10">
                    <property name="font">

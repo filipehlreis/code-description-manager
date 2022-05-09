@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialLFBFAz.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialXmxxfK.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -536,6 +536,11 @@ class Ui_MainWindow(object):
         self.homePage.setObjectName(u"homePage")
         self.verticalLayout_16 = QVBoxLayout(self.homePage)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
+        self.importCsvOmieBtn = QPushButton(self.homePage)
+        self.importCsvOmieBtn.setObjectName(u"importCsvOmieBtn")
+
+        self.verticalLayout_16.addWidget(self.importCsvOmieBtn)
+
         self.label_10 = QLabel(self.homePage)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setFont(font1)
@@ -979,7 +984,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.centerMenuPages.setCurrentIndex(2)
-        self.mainPages.setCurrentIndex(1)
+        self.mainPages.setCurrentIndex(0)
         self.rightMenuPages.setCurrentIndex(1)
 
 
@@ -1067,6 +1072,7 @@ class Ui_MainWindow(object):
         self.closeBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Window", None))
 #endif // QT_CONFIG(tooltip)
         self.closeBtn.setText("")
+        self.importCsvOmieBtn.setText(QCoreApplication.translate("MainWindow", u"Importar CSV do OMIE", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Status", None));
