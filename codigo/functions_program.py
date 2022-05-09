@@ -1,17 +1,17 @@
 # ########################################################################## #
 #                                  IMPORTS                                   #
 # ########################################################################## #
+import re
+import pandas as pd
+import os
+
+database_pandas = pd.DataFrame()
 
 
 # ########################################################################## #
 #                                    APIs                                    #
 # ########################################################################## #
 # TODO - Obter resposta de sucesso vinda da API da Mouser e Digikey.
-import re
-import pandas as pd
-import os
-
-
 def get_info_about_pn():
     pass
 
@@ -74,6 +74,29 @@ def export_database_to_csv_backup():
 # TODO - Importar o banco de dados para realização de Backup.
 def import_database_from_csv_backup():
     pass
+
+
+# TODO - Inserir uma tela de Loading antes de abrir o programa.
+# --> Inserir loading ao iniciar o programa.
+
+
+# TODO - Importar o banco de dados para realização de Backup.
+def import_database_from_excel_backup():
+    global database_pandas
+    print('\nIniciando importação do database.')
+
+    if database_pandas.empty:
+        try:
+            dir_to_load = 'input_output/database.xlsx'
+            dir_to_save = 'input_output/database-verifica.xlsx'
+            database_pandas = pd.read_excel(dir_to_load)
+            database_pandas.to_excel(dir_to_save, index=False)
+            print('Database importado com sucesso.\n')
+        except Exception as e:
+            # print(e)
+            if e:
+                print('Database não encontrado.')
+
 
 # TODO - No banco de dados deve conter todo o histórico de informações e
 # alterações realizadas em cada item.
@@ -443,16 +466,16 @@ def set_quantity_item_in_storage():
 # ########################################################################## #
 #                               CSV/PDF/EXCEL                                #
 # ########################################################################## #
-clean2 = pd.DataFrame()
 
 
 # TODO - Ler a planilha CSV oriunda do OMIE.
 def read_omie_sheet():
-    global clean2
+    global database_pandas
     print('\nIniciando import.')
     # import matplotlib.pyplot as plt
 
-    excel_file_dir = 'local_settings\compras,_estoque_e_producao_318635218276261.xlsx'
+    excel_file_dir = \
+        'local_settings\compras,_estoque_e_producao_318635218276261.xlsx'
     df_data = pd.read_excel(excel_file_dir)
     clean = df_data
     col_subset_delete = [
@@ -460,24 +483,25 @@ def read_omie_sheet():
         'Marca', 'Dias de Garantia', 'Dias de Crossdocking',
         'Cupom Fiscal (PDV)', 'Marketplace', 'Tipo do Item (Bloco K)',
         'Origem da Mercadoria', 'Preço Tabelado (Pauta)',
-        'Produzido em Escala Relevante', 'CNPJ Fabricante', 'Características', ]
+        'Produzido em Escala Relevante', 'CNPJ Fabricante', 'Características']
     clean = clean.drop(axis=1, labels=col_subset_delete)
     clean_df_data = clean
     regex = re.compile(r'[5679]{1}[0-9]{5}')
 
-    clean2 = clean_df_data[clean_df_data['Código'].str.len() == 6]
-    clean2 = clean2[clean2['Código'].str.match(regex)]
-    clean2['Descrição Simplificada'] = ''
+    database_pandas = clean_df_data[clean_df_data['Código'].str.len() == 6]
+    database_pandas = database_pandas[database_pandas['Código'].str.match(
+        regex)]
+    database_pandas['Descrição Simplificada'] = ''
     reorder_columns = [
         'Situação', 'Descrição', 'Descrição Simplificada', 'Código',
         'Família de Produto', 'Código NCM', 'Estoque Disponível', 'Unidade',
         'Custo Médio Contábil', 'Estoque Mínimo', 'Peso Líquido', 'Peso Bruto',
         'Altura', 'Largura', 'Profundidade', 'Inclusão', 'Última Alteração',
         'Incluído por', 'Alterado por', ]
-    clean2 = clean2[reorder_columns]
-    clean2['Corredor'] = 0
-    clean2['Prateleira'] = 0
-    clean2['Caixa'] = 0
+    database_pandas = database_pandas[reorder_columns]
+    database_pandas['Corredor'] = 0
+    database_pandas['Prateleira'] = 0
+    database_pandas['Caixa'] = 0
 
     print('Import realizado com sucesso.')
 
@@ -486,11 +510,11 @@ def read_omie_sheet():
 
 # TODO - Exportar o arquivo CSV recem lido e tratado para o HD
 def export_excel_sheet_omie():
-    global clean2
-    if not clean2.empty:
+    global database_pandas
+    if not database_pandas.empty:
         print('\nIniciando exportacao do arquivo excel.')
         dir_to_save = 'input_output/database.xlsx'
-        clean2.to_excel(dir_to_save, index=False)
+        database_pandas.to_excel(dir_to_save, index=False)
         print('Arquivo exportado com sucesso.\n')
     else:
         print('\nVazio, necessário importar primeiro.')

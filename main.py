@@ -8,7 +8,8 @@
 # ########################################################################### #
 import sys
 import os
-from codigo.functions_program import read_omie_sheet, export_excel_sheet_omie
+from codigo.functions_program import *
+
 # ########################################################################### #
 # IMPORT GUI GILE
 from ui_interface_22_modern_tutorial import *
@@ -89,6 +90,7 @@ if __name__ == "__main__":
 
     window = MainWindow()
     window.show()
+    import_database_from_excel_backup()
     sys.exit(app.exec_())
 
 
