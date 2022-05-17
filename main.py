@@ -6,6 +6,8 @@
 # ########################################################################### #
 # IMPORTS
 # ########################################################################### #
+from threading import Lock
+from threading import Thread
 import sys
 import os
 from codigo.functions_program import *
@@ -74,11 +76,16 @@ class MainWindow(QMainWindow):
 
         # BUTTONS
         self.ui.importCsvOmieBtn.clicked.connect(
-            lambda: read_omie_sheet()
+            lambda: thread_read_omie_sheet()
         )
 
+        # # BUTTONS
+        # self.ui.importCsvOmieBtn.clicked.connect(
+        #     lambda: (read_omie_sheet())
+        # )
+
         self.ui.exportCsvOmieToHdBtn.clicked.connect(
-            lambda: export_excel_sheet_omie()
+            lambda: thread_export_excel_sheet_omie()
         )
 
 
@@ -90,7 +97,9 @@ if __name__ == "__main__":
 
     window = MainWindow()
     window.show()
-    import_database_from_excel_backup()
+    t = Thread(target=import_database_from_excel_backup, args=())
+    # import_database_from_excel_backup()
+    t.start()
     sys.exit(app.exec_())
 
 

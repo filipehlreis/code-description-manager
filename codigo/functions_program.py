@@ -1,6 +1,8 @@
 # ########################################################################## #
 #                                  IMPORTS                                   #
 # ########################################################################## #
+from threading import Lock
+from threading import Thread
 import re
 import pandas as pd
 import os
@@ -469,6 +471,11 @@ def set_quantity_item_in_storage():
 
 
 # TODO - Ler a planilha CSV oriunda do OMIE.
+def thread_read_omie_sheet():
+    t = Thread(target=read_omie_sheet, args=())
+    t.start()
+
+
 def read_omie_sheet():
     global database_pandas
     print('\nIniciando import.')
@@ -509,6 +516,11 @@ def read_omie_sheet():
 
 
 # TODO - Exportar o arquivo CSV recem lido e tratado para o HD
+def thread_export_excel_sheet_omie():
+    t = Thread(target=export_excel_sheet_omie, args=())
+    t.start()
+
+
 def export_excel_sheet_omie():
     global database_pandas
     if not database_pandas.empty:
