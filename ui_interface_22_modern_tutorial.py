@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialNTrKcO.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialFJwvRz.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -568,8 +568,53 @@ class Ui_MainWindow(object):
         self.dataPage.setObjectName(u"dataPage")
         self.verticalLayout_17 = QVBoxLayout(self.dataPage)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
+        self.label_11 = QLabel(self.dataPage)
+        self.label_11.setObjectName(u"label_11")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.label_11.sizePolicy().hasHeightForWidth())
+        self.label_11.setSizePolicy(sizePolicy4)
+        self.label_11.setFont(font1)
+        self.label_11.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_17.addWidget(self.label_11, 0, Qt.AlignTop)
+
+        self.frame_13 = QFrame(self.dataPage)
+        self.frame_13.setObjectName(u"frame_13")
+        sizePolicy4.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
+        self.frame_13.setSizePolicy(sizePolicy4)
+        self.frame_13.setFrameShape(QFrame.StyledPanel)
+        self.frame_13.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_15 = QHBoxLayout(self.frame_13)
+        self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
+        self.database_search = QLineEdit(self.frame_13)
+        self.database_search.setObjectName(u"database_search")
+        self.database_search.setMinimumSize(QSize(200, 0))
+        self.database_search.setStyleSheet(u"\n"
+"QLineEdit {\n"
+"	border: solid 1px white;\n"
+"}")
+
+        self.horizontalLayout_15.addWidget(self.database_search, 0, Qt.AlignRight|Qt.AlignTop)
+
+        self.pushButton = QPushButton(self.frame_13)
+        self.pushButton.setObjectName(u"pushButton")
+        icon19 = QIcon()
+        icon19.addFile(u":/icons/icons/feather-WHITE/search.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton.setIcon(icon19)
+        self.pushButton.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_15.addWidget(self.pushButton, 0, Qt.AlignRight|Qt.AlignTop)
+
+
+        self.verticalLayout_17.addWidget(self.frame_13, 0, Qt.AlignRight|Qt.AlignTop)
+
         self.frame_12 = QFrame(self.dataPage)
         self.frame_12.setObjectName(u"frame_12")
+        sizePolicy3.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
+        self.frame_12.setSizePolicy(sizePolicy3)
+        self.frame_12.setMinimumSize(QSize(0, 0))
         self.frame_12.setFrameShape(QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QFrame.Raised)
         self.frame_12.setLineWidth(2)
@@ -691,8 +736,12 @@ class Ui_MainWindow(object):
         __qtablewidgetitem52 = QTableWidgetItem()
         self.database_table.setItem(4, 7, __qtablewidgetitem52)
         self.database_table.setObjectName(u"database_table")
-        sizePolicy.setHeightForWidth(self.database_table.sizePolicy().hasHeightForWidth())
-        self.database_table.setSizePolicy(sizePolicy)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.database_table.sizePolicy().hasHeightForWidth())
+        self.database_table.setSizePolicy(sizePolicy5)
+        self.database_table.setMinimumSize(QSize(0, 300))
         font3 = QFont()
         font3.setFamily(u"Montserrat Medium")
         font3.setPointSize(10)
@@ -704,7 +753,10 @@ class Ui_MainWindow(object):
 "    border: solid;\n"
 "    height: 30px;\n"
 "}\n"
-"")
+"\n"
+"QTableWidget {\n"
+"	height: 100%;\n"
+"}")
         self.database_table.setFrameShape(QFrame.StyledPanel)
         self.database_table.setFrameShadow(QFrame.Sunken)
         self.database_table.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
@@ -725,13 +777,6 @@ class Ui_MainWindow(object):
 
 
         self.verticalLayout_17.addWidget(self.frame_12)
-
-        self.label_11 = QLabel(self.dataPage)
-        self.label_11.setObjectName(u"label_11")
-        self.label_11.setFont(font1)
-        self.label_11.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_17.addWidget(self.label_11)
 
         self.mainPages.addWidget(self.dataPage)
         self.waitingPage = QWidget()
@@ -924,9 +969,9 @@ class Ui_MainWindow(object):
 
         self.closeNotificationBtn = QPushButton(self.frame_9)
         self.closeNotificationBtn.setObjectName(u"closeNotificationBtn")
-        icon19 = QIcon()
-        icon19.addFile(u":/icons/icons/feather-WHITE/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.closeNotificationBtn.setIcon(icon19)
+        icon20 = QIcon()
+        icon20.addFile(u":/icons/icons/feather-WHITE/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.closeNotificationBtn.setIcon(icon20)
         self.closeNotificationBtn.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_10.addWidget(self.closeNotificationBtn, 0, Qt.AlignRight)
@@ -999,7 +1044,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.centerMenuPages.setCurrentIndex(1)
-        self.mainPages.setCurrentIndex(0)
+        self.mainPages.setCurrentIndex(1)
         self.rightMenuPages.setCurrentIndex(1)
 
 
@@ -1092,6 +1137,8 @@ class Ui_MainWindow(object):
         self.createTable_databaseBtn.setText(QCoreApplication.translate("MainWindow", u"Inserir tabela basica no banco de dados", None))
         self.createTableDatabaseFullBtn.setText(QCoreApplication.translate("MainWindow", u"Inserir excel inteiro no banco de dados", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Home", None))
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Banco de Dados", None))
+        self.pushButton.setText("")
         ___qtablewidgetitem = self.database_table.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Status", None));
         ___qtablewidgetitem1 = self.database_table.horizontalHeaderItem(1)
@@ -1125,85 +1172,82 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
         ___qtablewidgetitem14 = self.database_table.item(0, 1)
         ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"660649", None));
-        ___qtablewidgetitem15 = self.database_table.item(0, 2)
-        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 82R 5%", None));
-        ___qtablewidgetitem16 = self.database_table.item(0, 3)
-        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 82R 5% (PN: CR0603-JW-820ELF) (PN: RK73B1JTTDD820J) (PN: CRGCQ0603F82R) (PN: RC0603JR-0782RL)", None));
-        ___qtablewidgetitem17 = self.database_table.item(0, 4)
-        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"5000", None));
-        ___qtablewidgetitem18 = self.database_table.item(0, 5)
-        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"20", None));
-        ___qtablewidgetitem19 = self.database_table.item(0, 6)
-        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"10", None));
-        ___qtablewidgetitem20 = self.database_table.item(0, 7)
-        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem21 = self.database_table.item(1, 0)
-        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
-        ___qtablewidgetitem22 = self.database_table.item(1, 1)
-        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"660630", None));
-        ___qtablewidgetitem23 = self.database_table.item(1, 2)
-        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"CAPACITOR CER\u00c2MICO SMD 0603 560pF 100V 5% C0G", None));
-        ___qtablewidgetitem24 = self.database_table.item(1, 3)
-        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"CAPACITOR CER\u00c2MICO SMD 0603 560pF 100V 5% C0G (PN: C1608C0G2A561J080AA) (PN: CC0603JRNPO0BN561) (PN: 0603N561J101CT)", None));
-        ___qtablewidgetitem25 = self.database_table.item(1, 4)
-        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"7000", None));
-        ___qtablewidgetitem26 = self.database_table.item(1, 5)
-        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"30", None));
-        ___qtablewidgetitem27 = self.database_table.item(1, 6)
-        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"4", None));
-        ___qtablewidgetitem28 = self.database_table.item(1, 7)
-        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem29 = self.database_table.item(2, 0)
-        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
-        ___qtablewidgetitem30 = self.database_table.item(2, 1)
-        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"660646", None));
-        ___qtablewidgetitem31 = self.database_table.item(2, 2)
+        ___qtablewidgetitem15 = self.database_table.item(0, 3)
+        ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 82R 5% (PN: CR0603-JW-820ELF) (PN: RK73B1JTTDD820J) (PN: CRGCQ0603F82R) (PN: RC0603JR-0782RL)", None));
+        ___qtablewidgetitem16 = self.database_table.item(0, 4)
+        ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"5000", None));
+        ___qtablewidgetitem17 = self.database_table.item(0, 5)
+        ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"20", None));
+        ___qtablewidgetitem18 = self.database_table.item(0, 6)
+        ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"10", None));
+        ___qtablewidgetitem19 = self.database_table.item(0, 7)
+        ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"1", None));
+        ___qtablewidgetitem20 = self.database_table.item(1, 0)
+        ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
+        ___qtablewidgetitem21 = self.database_table.item(1, 1)
+        ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"660630", None));
+        ___qtablewidgetitem22 = self.database_table.item(1, 2)
+        ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"CAPACITOR CER\u00c2MICO SMD 0603 560pF 100V 5% C0G", None));
+        ___qtablewidgetitem23 = self.database_table.item(1, 3)
+        ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"CAPACITOR CER\u00c2MICO SMD 0603 560pF 100V 5% C0G (PN: C1608C0G2A561J080AA) (PN: CC0603JRNPO0BN561) (PN: 0603N561J101CT)", None));
+        ___qtablewidgetitem24 = self.database_table.item(1, 4)
+        ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"7000", None));
+        ___qtablewidgetitem25 = self.database_table.item(1, 5)
+        ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"30", None));
+        ___qtablewidgetitem26 = self.database_table.item(1, 6)
+        ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"4", None));
+        ___qtablewidgetitem27 = self.database_table.item(1, 7)
+        ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"1", None));
+        ___qtablewidgetitem28 = self.database_table.item(2, 0)
+        ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
+        ___qtablewidgetitem29 = self.database_table.item(2, 1)
+        ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"660646", None));
+        ___qtablewidgetitem30 = self.database_table.item(2, 2)
+        ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"MICROCONTROLADOR (PN: STM32G070RBT6)", None));
+        ___qtablewidgetitem31 = self.database_table.item(2, 3)
         ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"MICROCONTROLADOR (PN: STM32G070RBT6)", None));
-        ___qtablewidgetitem32 = self.database_table.item(2, 3)
-        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"MICROCONTROLADOR (PN: STM32G070RBT6)", None));
-        ___qtablewidgetitem33 = self.database_table.item(2, 4)
-        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"10", None));
-        ___qtablewidgetitem34 = self.database_table.item(2, 5)
-        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"45", None));
-        ___qtablewidgetitem35 = self.database_table.item(2, 6)
-        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"3", None));
-        ___qtablewidgetitem36 = self.database_table.item(2, 7)
-        ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"2", None));
-        ___qtablewidgetitem37 = self.database_table.item(3, 0)
-        ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
-        ___qtablewidgetitem38 = self.database_table.item(3, 1)
-        ___qtablewidgetitem38.setText(QCoreApplication.translate("MainWindow", u"660488", None));
-        ___qtablewidgetitem39 = self.database_table.item(3, 2)
-        ___qtablewidgetitem39.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 470K 5%", None));
-        ___qtablewidgetitem40 = self.database_table.item(3, 3)
-        ___qtablewidgetitem40.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 470K 5% (PN: CR0603-JW-474ELF) (PN: AC0603JR-07470KL) (PN: RK73B1JTTD474J) (PN: ERJ-3GEYJ474V)", None));
-        ___qtablewidgetitem41 = self.database_table.item(3, 4)
-        ___qtablewidgetitem41.setText(QCoreApplication.translate("MainWindow", u"10000", None));
-        ___qtablewidgetitem42 = self.database_table.item(3, 5)
-        ___qtablewidgetitem42.setText(QCoreApplication.translate("MainWindow", u"3", None));
-        ___qtablewidgetitem43 = self.database_table.item(3, 6)
-        ___qtablewidgetitem43.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem44 = self.database_table.item(3, 7)
-        ___qtablewidgetitem44.setText(QCoreApplication.translate("MainWindow", u"2", None));
-        ___qtablewidgetitem45 = self.database_table.item(4, 0)
-        ___qtablewidgetitem45.setText(QCoreApplication.translate("MainWindow", u"Inativo", None));
-        ___qtablewidgetitem46 = self.database_table.item(4, 1)
-        ___qtablewidgetitem46.setText(QCoreApplication.translate("MainWindow", u"772892", None));
-        ___qtablewidgetitem47 = self.database_table.item(4, 2)
-        ___qtablewidgetitem47.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0805 510mR 1% 1/4W", None));
-        ___qtablewidgetitem48 = self.database_table.item(4, 3)
-        ___qtablewidgetitem48.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0805 510mR 1% 1/4W (PN: KDV08DR510ET\u200e) (PN: ERJ-6DQFR51V) (PN: RL0805FR-7W0R51L)", None));
-        ___qtablewidgetitem49 = self.database_table.item(4, 4)
-        ___qtablewidgetitem49.setText(QCoreApplication.translate("MainWindow", u"800", None));
-        ___qtablewidgetitem50 = self.database_table.item(4, 5)
-        ___qtablewidgetitem50.setText(QCoreApplication.translate("MainWindow", u"22", None));
-        ___qtablewidgetitem51 = self.database_table.item(4, 6)
+        ___qtablewidgetitem32 = self.database_table.item(2, 4)
+        ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"10", None));
+        ___qtablewidgetitem33 = self.database_table.item(2, 5)
+        ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"45", None));
+        ___qtablewidgetitem34 = self.database_table.item(2, 6)
+        ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"3", None));
+        ___qtablewidgetitem35 = self.database_table.item(2, 7)
+        ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"2", None));
+        ___qtablewidgetitem36 = self.database_table.item(3, 0)
+        ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
+        ___qtablewidgetitem37 = self.database_table.item(3, 1)
+        ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"660488", None));
+        ___qtablewidgetitem38 = self.database_table.item(3, 2)
+        ___qtablewidgetitem38.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 470K 5%", None));
+        ___qtablewidgetitem39 = self.database_table.item(3, 3)
+        ___qtablewidgetitem39.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 470K 5% (PN: CR0603-JW-474ELF) (PN: AC0603JR-07470KL) (PN: RK73B1JTTD474J) (PN: ERJ-3GEYJ474V)", None));
+        ___qtablewidgetitem40 = self.database_table.item(3, 4)
+        ___qtablewidgetitem40.setText(QCoreApplication.translate("MainWindow", u"10000", None));
+        ___qtablewidgetitem41 = self.database_table.item(3, 5)
+        ___qtablewidgetitem41.setText(QCoreApplication.translate("MainWindow", u"3", None));
+        ___qtablewidgetitem42 = self.database_table.item(3, 6)
+        ___qtablewidgetitem42.setText(QCoreApplication.translate("MainWindow", u"1", None));
+        ___qtablewidgetitem43 = self.database_table.item(3, 7)
+        ___qtablewidgetitem43.setText(QCoreApplication.translate("MainWindow", u"2", None));
+        ___qtablewidgetitem44 = self.database_table.item(4, 0)
+        ___qtablewidgetitem44.setText(QCoreApplication.translate("MainWindow", u"Inativo", None));
+        ___qtablewidgetitem45 = self.database_table.item(4, 1)
+        ___qtablewidgetitem45.setText(QCoreApplication.translate("MainWindow", u"772892", None));
+        ___qtablewidgetitem46 = self.database_table.item(4, 2)
+        ___qtablewidgetitem46.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0805 510mR 1% 1/4W", None));
+        ___qtablewidgetitem47 = self.database_table.item(4, 3)
+        ___qtablewidgetitem47.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0805 510mR 1% 1/4W (PN: KDV08DR510ET\u200e) (PN: ERJ-6DQFR51V) (PN: RL0805FR-7W0R51L)", None));
+        ___qtablewidgetitem48 = self.database_table.item(4, 4)
+        ___qtablewidgetitem48.setText(QCoreApplication.translate("MainWindow", u"800", None));
+        ___qtablewidgetitem49 = self.database_table.item(4, 5)
+        ___qtablewidgetitem49.setText(QCoreApplication.translate("MainWindow", u"22", None));
+        ___qtablewidgetitem50 = self.database_table.item(4, 6)
+        ___qtablewidgetitem50.setText(QCoreApplication.translate("MainWindow", u"5", None));
+        ___qtablewidgetitem51 = self.database_table.item(4, 7)
         ___qtablewidgetitem51.setText(QCoreApplication.translate("MainWindow", u"5", None));
-        ___qtablewidgetitem52 = self.database_table.item(4, 7)
-        ___qtablewidgetitem52.setText(QCoreApplication.translate("MainWindow", u"5", None));
         self.database_table.setSortingEnabled(__sortingEnabled)
 
-        self.label_11.setText(QCoreApplication.translate("MainWindow", u"Data Base", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Aguardando Padroniza\u00e7\u00e3o", None))
         self.label_16.setText(QCoreApplication.translate("MainWindow", u"Lista de Materiais", None))
         self.label_17.setText(QCoreApplication.translate("MainWindow", u"Pick & Place", None))

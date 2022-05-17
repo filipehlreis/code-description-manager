@@ -1018,7 +1018,7 @@ border-radius: 10px;
              <item>
               <widget class="QCustomStackedWidget" name="mainPages">
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <widget class="QWidget" name="homePage">
                 <layout class="QVBoxLayout" name="verticalLayout_16">
@@ -1069,8 +1069,92 @@ border-radius: 10px;
                </widget>
                <widget class="QWidget" name="dataPage">
                 <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item alignment="Qt::AlignTop">
+                  <widget class="QLabel" name="label_11">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Banco de Dados</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignRight|Qt::AlignTop">
+                  <widget class="QFrame" name="frame_13">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_15">
+                    <item alignment="Qt::AlignRight|Qt::AlignTop">
+                     <widget class="QLineEdit" name="database_search">
+                      <property name="minimumSize">
+                       <size>
+                        <width>200</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">
+QLineEdit {
+	border: solid 1px white;
+}</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item alignment="Qt::AlignRight|Qt::AlignTop">
+                     <widget class="QPushButton" name="pushButton">
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="resources.qrc">
+                        <normaloff>:/icons/icons/feather-WHITE/search.svg</normaloff>:/icons/icons/feather-WHITE/search.svg</iconset>
+                      </property>
+                      <property name="iconSize">
+                       <size>
+                        <width>24</width>
+                        <height>24</height>
+                       </size>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
                  <item>
                   <widget class="QFrame" name="frame_12">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
                    <property name="frameShape">
                     <enum>QFrame::StyledPanel</enum>
                    </property>
@@ -1087,10 +1171,16 @@ border-radius: 10px;
                     <item>
                      <widget class="QTableWidget" name="database_table">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>300</height>
+                       </size>
                       </property>
                       <property name="font">
                        <font>
@@ -1106,7 +1196,10 @@ border-radius: 10px;
     border: solid;
     height: 30px;
 }
-</string>
+
+QTableWidget {
+	height: 100%;
+}</string>
                       </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
@@ -1239,7 +1332,7 @@ border-radius: 10px;
                       </item>
                       <item row="0" column="2">
                        <property name="text">
-                        <string>RESISTOR SMD 0603 82R 5%</string>
+                        <string/>
                        </property>
                       </item>
                       <item row="0" column="3">
@@ -1430,21 +1523,6 @@ border-radius: 10px;
                      </widget>
                     </item>
                    </layout>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="label_11">
-                   <property name="font">
-                    <font>
-                     <pointsize>13</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Data Base</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
                   </widget>
                  </item>
                 </layout>

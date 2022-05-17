@@ -93,6 +93,8 @@ class MainWindow(QMainWindow):
         self.ui.database_table.horizontalHeader().sectionResized.connect(
             self.ui.database_table.resizeColumnsToContents())
 
+        self.ui.database_search.textChanged.connect(findName)
+
     # def create_table_widget(self, rowPosition, columnPosition, text, tableName):
     #     qtablewidgetitem = QTableWidgetItem()
 

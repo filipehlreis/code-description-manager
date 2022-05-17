@@ -161,6 +161,32 @@ def createTable_database_full():
     window.ui.database_table.resizeColumnsToContents()
 
 
+def findName():
+    window = findWindowApplication()
+
+    name = window.ui.database_search.text().lower()
+    for row in range(window.ui.database_table.rowCount()):
+        id_item = window.ui.database_table.item(row, 1)
+        basic_item = window.ui.database_table.item(row, 2)
+        full_item = window.ui.database_table.item(row, 3)
+        pesquisa = False
+
+        if name not in full_item.text().lower():
+            pesquisa = True
+
+        basic_item_text = basic_item.text().lower()
+        if basic_item_text:
+            if name not in basic_item_text:
+                pesquisa = True
+
+        if name in id_item.text().lower():
+            pesquisa = False
+
+        # if the search is *not* in the item's text *do not hide* the row
+        window.ui.database_table.setRowHidden(
+            row, pesquisa)
+
+
 def setTextToNotificationPopUp(message: str):
     window = findWindowApplication()
     if window:
@@ -626,9 +652,9 @@ def export_excel_sheet_omie():
 """
 This file was created so I could config the virtual enviromment and install
 what I would need for the course.
-"""
-if __name__ == "__main__":
-    os.system('jupyter notebook')
+# """
+# if __name__ == "__main__":
+#     os.system('jupyter notebook')
 
 
 # TODO - Utilizar Pandas para realizar a filtragem necessaria para o arquivo
