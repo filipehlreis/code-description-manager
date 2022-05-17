@@ -150,13 +150,15 @@ def createTable_database_full():
         create_table_widget(
             window, rowPosition, 3, data['Descrição'], 'database_table')
         create_table_widget(
-            window, rowPosition, 4, str(data['Estoque Disponível']), 'database_table')
+            window, rowPosition, 4, (str(data['Estoque Disponível']).replace(',', '.')), 'database_table')
         create_table_widget(
             window, rowPosition, 5, str(data['Caixa']), 'database_table')
         create_table_widget(
             window, rowPosition, 6, str(data['Prateleira']), 'database_table')
         create_table_widget(
             window, rowPosition, 7, str(data['Corredor']), 'database_table')
+
+    window.ui.database_table.resizeColumnsToContents()
 
 
 def setTextToNotificationPopUp(message: str):

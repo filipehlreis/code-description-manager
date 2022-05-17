@@ -90,6 +90,9 @@ class MainWindow(QMainWindow):
             lambda: createTable_database_full()
         )
 
+        self.ui.database_table.horizontalHeader().sectionResized.connect(
+            self.ui.database_table.resizeColumnsToContents())
+
     # def create_table_widget(self, rowPosition, columnPosition, text, tableName):
     #     qtablewidgetitem = QTableWidgetItem()
 
