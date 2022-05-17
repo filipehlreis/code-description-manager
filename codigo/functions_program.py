@@ -1,11 +1,11 @@
 # ########################################################################## #
 #                                  IMPORTS                                   #
 # ########################################################################## #
-from threading import Lock
 from threading import Thread
 import re
 import pandas as pd
 import os
+from Custom_Widgets.Widgets import *
 
 database_pandas = pd.DataFrame()
 
@@ -82,10 +82,26 @@ def import_database_from_csv_backup():
 # --> Inserir loading ao iniciar o programa.
 
 
+# TODO - Encontrar a instancia atual da janela do PyQT
+def findWindowApplication():
+    app = QApplication.instance()
+    for widget in app.topLevelWidgets():
+        if isinstance(widget, QMainWindow):
+            return widget
+    return None
+
+
+def setTextToNotificationPopUp(message: str):
+    window = findWindowApplication()
+    if window:
+        window.ui.notificationLabel.setText(message)
+        window.ui.notificationBtn.click()
+
+
 # TODO - Importar o banco de dados para realização de Backup.
 def import_database_from_excel_backup():
     global database_pandas
-    print('\nIniciando importação do database.')
+    print('\nIniciando importação do Banco de Dados.')
 
     if database_pandas.empty:
         try:
@@ -93,11 +109,12 @@ def import_database_from_excel_backup():
             dir_to_save = 'input_output/database-verifica.xlsx'
             database_pandas = pd.read_excel(dir_to_load)
             database_pandas.to_excel(dir_to_save, index=False)
-            print('Database importado com sucesso.\n')
+            print('Banco de Dados importado com sucesso.\n')
         except Exception as e:
-            # print(e)
             if e:
-                print('Database não encontrado.')
+                message = 'Banco de Dados não encontrado.'
+                setTextToNotificationPopUp(message)
+                print(message)
 
 
 # TODO - No banco de dados deve conter todo o histórico de informações e
@@ -524,12 +541,15 @@ def thread_export_excel_sheet_omie():
 def export_excel_sheet_omie():
     global database_pandas
     if not database_pandas.empty:
-        print('\nIniciando exportacao do arquivo excel.')
+        print('\nIniciando exportação do arquivo em Excel.')
         dir_to_save = 'input_output/database.xlsx'
         database_pandas.to_excel(dir_to_save, index=False)
         print('Arquivo exportado com sucesso.\n')
     else:
-        print('\nVazio, necessário importar primeiro.')
+        message = 'Banco de Dados vazio! Necessário importar ou '\
+            'adicionar novos itens primeiro.'
+        setTextToNotificationPopUp(message)
+        print('\n' + message)
 
 
 # read_omie_sheet()

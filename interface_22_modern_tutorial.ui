@@ -1727,7 +1727,7 @@ border-radius: 10px;
                 </font>
                </property>
                <property name="text">
-                <string>Notification</string>
+                <string>Notificação</string>
                </property>
               </widget>
              </item>
@@ -1741,7 +1741,7 @@ border-radius: 10px;
                </property>
                <layout class="QHBoxLayout" name="horizontalLayout_10">
                 <item>
-                 <widget class="QLabel" name="label_13">
+                 <widget class="QLabel" name="notificationLabel">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                     <horstretch>0</horstretch>

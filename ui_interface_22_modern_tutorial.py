@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialTBvXDZ.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialbYthKP.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -904,13 +904,13 @@ class Ui_MainWindow(object):
         self.frame_9.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_10 = QHBoxLayout(self.frame_9)
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.label_13 = QLabel(self.frame_9)
-        self.label_13.setObjectName(u"label_13")
-        sizePolicy2.setHeightForWidth(self.label_13.sizePolicy().hasHeightForWidth())
-        self.label_13.setSizePolicy(sizePolicy2)
-        self.label_13.setAlignment(Qt.AlignCenter)
+        self.notificationLabel = QLabel(self.frame_9)
+        self.notificationLabel.setObjectName(u"notificationLabel")
+        sizePolicy2.setHeightForWidth(self.notificationLabel.sizePolicy().hasHeightForWidth())
+        self.notificationLabel.setSizePolicy(sizePolicy2)
+        self.notificationLabel.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_10.addWidget(self.label_13)
+        self.horizontalLayout_10.addWidget(self.notificationLabel)
 
         self.closeNotificationBtn = QPushButton(self.frame_9)
         self.closeNotificationBtn.setObjectName(u"closeNotificationBtn")
@@ -1205,8 +1205,8 @@ class Ui_MainWindow(object):
         self.closeRightMenuBtn.setText("")
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Profile", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"More ...", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Notification", None))
-        self.label_13.setText(QCoreApplication.translate("MainWindow", u"Notification Message", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Notifica\u00e7\u00e3o", None))
+        self.notificationLabel.setText(QCoreApplication.translate("MainWindow", u"Notification Message", None))
 #if QT_CONFIG(tooltip)
         self.closeNotificationBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Notification", None))
 #endif // QT_CONFIG(tooltip)
