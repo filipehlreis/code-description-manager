@@ -689,7 +689,7 @@ border-radius: 10px;
              </size>
             </property>
             <property name="currentIndex">
-             <number>2</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="settingsPage">
              <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -1037,6 +1037,20 @@ border-radius: 10px;
                   </widget>
                  </item>
                  <item>
+                  <widget class="QPushButton" name="createTable_databaseBtn">
+                   <property name="text">
+                    <string>Inserir tabela basica no banco de dados</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="createTableDatabaseFullBtn">
+                   <property name="text">
+                    <string>Inserir excel inteiro no banco de dados</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QLabel" name="label_10">
                    <property name="font">
                     <font>
@@ -1071,7 +1085,7 @@ border-radius: 10px;
                      <enum>QLayout::SetDefaultConstraint</enum>
                     </property>
                     <item>
-                     <widget class="QTableWidget" name="tableWidget">
+                     <widget class="QTableWidget" name="database_table">
                       <property name="sizePolicy">
                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                         <horstretch>0</horstretch>

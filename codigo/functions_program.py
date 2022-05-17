@@ -83,12 +83,80 @@ def import_database_from_csv_backup():
 
 
 # TODO - Encontrar a instancia atual da janela do PyQT
-def findWindowApplication():
+def findWindowApplication() -> QMainWindow:
     app = QApplication.instance()
     for widget in app.topLevelWidgets():
         if isinstance(widget, QMainWindow):
             return widget
     return None
+
+
+def create_table_widget(window, rowPosition, columnPosition, text, tableName):
+    qtablewidgetitem = QTableWidgetItem()
+
+    # USER getattr() METHOD
+    getattr(window.ui, tableName).setItem(
+        rowPosition, columnPosition, qtablewidgetitem)
+    qtablewidgetitem = getattr(window.ui, tableName).item(
+        rowPosition, columnPosition)
+
+    qtablewidgetitem.setText(text)
+
+
+def createTable_database_basic():
+    window = findWindowApplication()
+
+    for x in range(10):
+        rowPosition = window.ui.database_table.rowCount()
+        window.ui.database_table.insertRow(rowPosition)
+
+        create_table_widget(
+            window, rowPosition, 0, f'Teste {x}', 'database_table')
+        create_table_widget(
+            window, rowPosition, 1, f'Teste {x}', 'database_table')
+        create_table_widget(
+            window, rowPosition, 2, f'Teste {x}', 'database_table')
+        create_table_widget(
+            window, rowPosition, 3, f'Teste {x}', 'database_table')
+        create_table_widget(
+            window, rowPosition, 4, f'Teste {x}', 'database_table')
+        create_table_widget(
+            window, rowPosition, 5, f'Teste {x}', 'database_table')
+        create_table_widget(
+            window, rowPosition, 6, f'Teste {x}', 'database_table')
+        create_table_widget(
+            window, rowPosition, 7, f'Teste {x}', 'database_table')
+
+
+def createTable_database_full():
+    global database_pandas
+
+    print(database_pandas)
+
+    window = findWindowApplication()
+
+    for x in range(database_pandas.shape[0]):
+        rowPosition = window.ui.database_table.rowCount()
+        window.ui.database_table.insertRow(rowPosition)
+
+        data = database_pandas.iloc[x]
+
+        create_table_widget(
+            window, rowPosition, 0, data['Situação'], 'database_table')
+        create_table_widget(
+            window, rowPosition, 1, str(data['Código']), 'database_table')
+        create_table_widget(
+            window, rowPosition, 2, data['Descrição Simplificada'], 'database_table')
+        create_table_widget(
+            window, rowPosition, 3, data['Descrição'], 'database_table')
+        create_table_widget(
+            window, rowPosition, 4, str(data['Estoque Disponível']), 'database_table')
+        create_table_widget(
+            window, rowPosition, 5, str(data['Caixa']), 'database_table')
+        create_table_widget(
+            window, rowPosition, 6, str(data['Prateleira']), 'database_table')
+        create_table_widget(
+            window, rowPosition, 7, str(data['Corredor']), 'database_table')
 
 
 def setTextToNotificationPopUp(message: str):
@@ -557,8 +625,8 @@ def export_excel_sheet_omie():
 This file was created so I could config the virtual enviromment and install
 what I would need for the course.
 """
-
-# os.system('jupyter notebook')
+if __name__ == "__main__":
+    os.system('jupyter notebook')
 
 
 # TODO - Utilizar Pandas para realizar a filtragem necessaria para o arquivo

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialbYthKP.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialNTrKcO.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -546,6 +546,16 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_16.addWidget(self.exportCsvOmieToHdBtn)
 
+        self.createTable_databaseBtn = QPushButton(self.homePage)
+        self.createTable_databaseBtn.setObjectName(u"createTable_databaseBtn")
+
+        self.verticalLayout_16.addWidget(self.createTable_databaseBtn)
+
+        self.createTableDatabaseFullBtn = QPushButton(self.homePage)
+        self.createTableDatabaseFullBtn.setObjectName(u"createTableDatabaseFullBtn")
+
+        self.verticalLayout_16.addWidget(self.createTableDatabaseFullBtn)
+
         self.label_10 = QLabel(self.homePage)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setFont(font1)
@@ -566,128 +576,128 @@ class Ui_MainWindow(object):
         self.horizontalLayout_14 = QHBoxLayout(self.frame_12)
         self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
         self.horizontalLayout_14.setSizeConstraint(QLayout.SetDefaultConstraint)
-        self.tableWidget = QTableWidget(self.frame_12)
-        if (self.tableWidget.columnCount() < 8):
-            self.tableWidget.setColumnCount(8)
+        self.database_table = QTableWidget(self.frame_12)
+        if (self.database_table.columnCount() < 8):
+            self.database_table.setColumnCount(8)
         __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        self.database_table.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
         __qtablewidgetitem1.setTextAlignment(Qt.AlignLeading|Qt.AlignVCenter);
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        self.database_table.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        self.database_table.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.database_table.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        self.database_table.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        self.database_table.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        self.database_table.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(7, __qtablewidgetitem7)
-        if (self.tableWidget.rowCount() < 5):
-            self.tableWidget.setRowCount(5)
+        self.database_table.setHorizontalHeaderItem(7, __qtablewidgetitem7)
+        if (self.database_table.rowCount() < 5):
+            self.database_table.setRowCount(5)
         __qtablewidgetitem8 = QTableWidgetItem()
         __qtablewidgetitem8.setTextAlignment(Qt.AlignLeading|Qt.AlignVCenter);
-        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem8)
+        self.database_table.setVerticalHeaderItem(0, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(1, __qtablewidgetitem9)
+        self.database_table.setVerticalHeaderItem(1, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(2, __qtablewidgetitem10)
+        self.database_table.setVerticalHeaderItem(2, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(3, __qtablewidgetitem11)
+        self.database_table.setVerticalHeaderItem(3, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem12)
+        self.database_table.setVerticalHeaderItem(4, __qtablewidgetitem12)
         __qtablewidgetitem13 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 0, __qtablewidgetitem13)
+        self.database_table.setItem(0, 0, __qtablewidgetitem13)
         __qtablewidgetitem14 = QTableWidgetItem()
         __qtablewidgetitem14.setTextAlignment(Qt.AlignLeading|Qt.AlignVCenter);
-        self.tableWidget.setItem(0, 1, __qtablewidgetitem14)
+        self.database_table.setItem(0, 1, __qtablewidgetitem14)
         __qtablewidgetitem15 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 2, __qtablewidgetitem15)
+        self.database_table.setItem(0, 2, __qtablewidgetitem15)
         __qtablewidgetitem16 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 3, __qtablewidgetitem16)
+        self.database_table.setItem(0, 3, __qtablewidgetitem16)
         __qtablewidgetitem17 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 4, __qtablewidgetitem17)
+        self.database_table.setItem(0, 4, __qtablewidgetitem17)
         __qtablewidgetitem18 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 5, __qtablewidgetitem18)
+        self.database_table.setItem(0, 5, __qtablewidgetitem18)
         __qtablewidgetitem19 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 6, __qtablewidgetitem19)
+        self.database_table.setItem(0, 6, __qtablewidgetitem19)
         __qtablewidgetitem20 = QTableWidgetItem()
-        self.tableWidget.setItem(0, 7, __qtablewidgetitem20)
+        self.database_table.setItem(0, 7, __qtablewidgetitem20)
         __qtablewidgetitem21 = QTableWidgetItem()
-        self.tableWidget.setItem(1, 0, __qtablewidgetitem21)
+        self.database_table.setItem(1, 0, __qtablewidgetitem21)
         __qtablewidgetitem22 = QTableWidgetItem()
-        self.tableWidget.setItem(1, 1, __qtablewidgetitem22)
+        self.database_table.setItem(1, 1, __qtablewidgetitem22)
         __qtablewidgetitem23 = QTableWidgetItem()
-        self.tableWidget.setItem(1, 2, __qtablewidgetitem23)
+        self.database_table.setItem(1, 2, __qtablewidgetitem23)
         __qtablewidgetitem24 = QTableWidgetItem()
-        self.tableWidget.setItem(1, 3, __qtablewidgetitem24)
+        self.database_table.setItem(1, 3, __qtablewidgetitem24)
         __qtablewidgetitem25 = QTableWidgetItem()
-        self.tableWidget.setItem(1, 4, __qtablewidgetitem25)
+        self.database_table.setItem(1, 4, __qtablewidgetitem25)
         __qtablewidgetitem26 = QTableWidgetItem()
-        self.tableWidget.setItem(1, 5, __qtablewidgetitem26)
+        self.database_table.setItem(1, 5, __qtablewidgetitem26)
         __qtablewidgetitem27 = QTableWidgetItem()
-        self.tableWidget.setItem(1, 6, __qtablewidgetitem27)
+        self.database_table.setItem(1, 6, __qtablewidgetitem27)
         __qtablewidgetitem28 = QTableWidgetItem()
-        self.tableWidget.setItem(1, 7, __qtablewidgetitem28)
+        self.database_table.setItem(1, 7, __qtablewidgetitem28)
         __qtablewidgetitem29 = QTableWidgetItem()
-        self.tableWidget.setItem(2, 0, __qtablewidgetitem29)
+        self.database_table.setItem(2, 0, __qtablewidgetitem29)
         __qtablewidgetitem30 = QTableWidgetItem()
-        self.tableWidget.setItem(2, 1, __qtablewidgetitem30)
+        self.database_table.setItem(2, 1, __qtablewidgetitem30)
         __qtablewidgetitem31 = QTableWidgetItem()
-        self.tableWidget.setItem(2, 2, __qtablewidgetitem31)
+        self.database_table.setItem(2, 2, __qtablewidgetitem31)
         __qtablewidgetitem32 = QTableWidgetItem()
-        self.tableWidget.setItem(2, 3, __qtablewidgetitem32)
+        self.database_table.setItem(2, 3, __qtablewidgetitem32)
         __qtablewidgetitem33 = QTableWidgetItem()
-        self.tableWidget.setItem(2, 4, __qtablewidgetitem33)
+        self.database_table.setItem(2, 4, __qtablewidgetitem33)
         __qtablewidgetitem34 = QTableWidgetItem()
-        self.tableWidget.setItem(2, 5, __qtablewidgetitem34)
+        self.database_table.setItem(2, 5, __qtablewidgetitem34)
         __qtablewidgetitem35 = QTableWidgetItem()
-        self.tableWidget.setItem(2, 6, __qtablewidgetitem35)
+        self.database_table.setItem(2, 6, __qtablewidgetitem35)
         __qtablewidgetitem36 = QTableWidgetItem()
-        self.tableWidget.setItem(2, 7, __qtablewidgetitem36)
+        self.database_table.setItem(2, 7, __qtablewidgetitem36)
         __qtablewidgetitem37 = QTableWidgetItem()
-        self.tableWidget.setItem(3, 0, __qtablewidgetitem37)
+        self.database_table.setItem(3, 0, __qtablewidgetitem37)
         __qtablewidgetitem38 = QTableWidgetItem()
-        self.tableWidget.setItem(3, 1, __qtablewidgetitem38)
+        self.database_table.setItem(3, 1, __qtablewidgetitem38)
         __qtablewidgetitem39 = QTableWidgetItem()
-        self.tableWidget.setItem(3, 2, __qtablewidgetitem39)
+        self.database_table.setItem(3, 2, __qtablewidgetitem39)
         __qtablewidgetitem40 = QTableWidgetItem()
-        self.tableWidget.setItem(3, 3, __qtablewidgetitem40)
+        self.database_table.setItem(3, 3, __qtablewidgetitem40)
         __qtablewidgetitem41 = QTableWidgetItem()
-        self.tableWidget.setItem(3, 4, __qtablewidgetitem41)
+        self.database_table.setItem(3, 4, __qtablewidgetitem41)
         __qtablewidgetitem42 = QTableWidgetItem()
-        self.tableWidget.setItem(3, 5, __qtablewidgetitem42)
+        self.database_table.setItem(3, 5, __qtablewidgetitem42)
         __qtablewidgetitem43 = QTableWidgetItem()
-        self.tableWidget.setItem(3, 6, __qtablewidgetitem43)
+        self.database_table.setItem(3, 6, __qtablewidgetitem43)
         __qtablewidgetitem44 = QTableWidgetItem()
-        self.tableWidget.setItem(3, 7, __qtablewidgetitem44)
+        self.database_table.setItem(3, 7, __qtablewidgetitem44)
         __qtablewidgetitem45 = QTableWidgetItem()
-        self.tableWidget.setItem(4, 0, __qtablewidgetitem45)
+        self.database_table.setItem(4, 0, __qtablewidgetitem45)
         __qtablewidgetitem46 = QTableWidgetItem()
-        self.tableWidget.setItem(4, 1, __qtablewidgetitem46)
+        self.database_table.setItem(4, 1, __qtablewidgetitem46)
         __qtablewidgetitem47 = QTableWidgetItem()
-        self.tableWidget.setItem(4, 2, __qtablewidgetitem47)
+        self.database_table.setItem(4, 2, __qtablewidgetitem47)
         __qtablewidgetitem48 = QTableWidgetItem()
-        self.tableWidget.setItem(4, 3, __qtablewidgetitem48)
+        self.database_table.setItem(4, 3, __qtablewidgetitem48)
         __qtablewidgetitem49 = QTableWidgetItem()
-        self.tableWidget.setItem(4, 4, __qtablewidgetitem49)
+        self.database_table.setItem(4, 4, __qtablewidgetitem49)
         __qtablewidgetitem50 = QTableWidgetItem()
-        self.tableWidget.setItem(4, 5, __qtablewidgetitem50)
+        self.database_table.setItem(4, 5, __qtablewidgetitem50)
         __qtablewidgetitem51 = QTableWidgetItem()
-        self.tableWidget.setItem(4, 6, __qtablewidgetitem51)
+        self.database_table.setItem(4, 6, __qtablewidgetitem51)
         __qtablewidgetitem52 = QTableWidgetItem()
-        self.tableWidget.setItem(4, 7, __qtablewidgetitem52)
-        self.tableWidget.setObjectName(u"tableWidget")
-        sizePolicy.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
-        self.tableWidget.setSizePolicy(sizePolicy)
+        self.database_table.setItem(4, 7, __qtablewidgetitem52)
+        self.database_table.setObjectName(u"database_table")
+        sizePolicy.setHeightForWidth(self.database_table.sizePolicy().hasHeightForWidth())
+        self.database_table.setSizePolicy(sizePolicy)
         font3 = QFont()
         font3.setFamily(u"Montserrat Medium")
         font3.setPointSize(10)
-        self.tableWidget.setFont(font3)
-        self.tableWidget.setStyleSheet(u"QHeaderView::section {\n"
+        self.database_table.setFont(font3)
+        self.database_table.setStyleSheet(u"QHeaderView::section {\n"
 "    background-color: #30B28C;\n"
 "	font: bold 10pt \"Arial\";\n"
 "\n"
@@ -695,23 +705,23 @@ class Ui_MainWindow(object):
 "    height: 30px;\n"
 "}\n"
 "")
-        self.tableWidget.setFrameShape(QFrame.StyledPanel)
-        self.tableWidget.setFrameShadow(QFrame.Sunken)
-        self.tableWidget.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
-        self.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.tableWidget.setDragEnabled(False)
-        self.tableWidget.setDragDropMode(QAbstractItemView.NoDragDrop)
-        self.tableWidget.setAlternatingRowColors(False)
-        self.tableWidget.setSelectionMode(QAbstractItemView.ExtendedSelection)
-        self.tableWidget.setSelectionBehavior(QAbstractItemView.SelectRows)
-        self.tableWidget.setHorizontalScrollMode(QAbstractItemView.ScrollPerPixel)
-        self.tableWidget.setSortingEnabled(True)
-        self.tableWidget.setCornerButtonEnabled(False)
-        self.tableWidget.horizontalHeader().setMinimumSectionSize(60)
-        self.tableWidget.horizontalHeader().setHighlightSections(True)
-        self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.database_table.setFrameShape(QFrame.StyledPanel)
+        self.database_table.setFrameShadow(QFrame.Sunken)
+        self.database_table.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
+        self.database_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        self.database_table.setDragEnabled(False)
+        self.database_table.setDragDropMode(QAbstractItemView.NoDragDrop)
+        self.database_table.setAlternatingRowColors(False)
+        self.database_table.setSelectionMode(QAbstractItemView.ExtendedSelection)
+        self.database_table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.database_table.setHorizontalScrollMode(QAbstractItemView.ScrollPerPixel)
+        self.database_table.setSortingEnabled(True)
+        self.database_table.setCornerButtonEnabled(False)
+        self.database_table.horizontalHeader().setMinimumSectionSize(60)
+        self.database_table.horizontalHeader().setHighlightSections(True)
+        self.database_table.horizontalHeader().setStretchLastSection(True)
 
-        self.horizontalLayout_14.addWidget(self.tableWidget)
+        self.horizontalLayout_14.addWidget(self.database_table)
 
 
         self.verticalLayout_17.addWidget(self.frame_12)
@@ -988,7 +998,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.centerMenuPages.setCurrentIndex(2)
+        self.centerMenuPages.setCurrentIndex(1)
         self.mainPages.setCurrentIndex(0)
         self.rightMenuPages.setCurrentIndex(1)
 
@@ -1079,117 +1089,119 @@ class Ui_MainWindow(object):
         self.closeBtn.setText("")
         self.importCsvOmieBtn.setText(QCoreApplication.translate("MainWindow", u"Importar arquivo EXCEL do OMIE", None))
         self.exportCsvOmieToHdBtn.setText(QCoreApplication.translate("MainWindow", u"Gravar CSV tratado no HD", None))
+        self.createTable_databaseBtn.setText(QCoreApplication.translate("MainWindow", u"Inserir tabela basica no banco de dados", None))
+        self.createTableDatabaseFullBtn.setText(QCoreApplication.translate("MainWindow", u"Inserir excel inteiro no banco de dados", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem = self.database_table.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Status", None));
-        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1 = self.database_table.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"C\u00f3digo", None));
-        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2 = self.database_table.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"Descri\u00e7\u00e3o Simplificada", None));
-        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3 = self.database_table.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"Descri\u00e7\u00e3o Completa", None));
-        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem4 = self.database_table.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Quantidade", None));
-        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
+        ___qtablewidgetitem5 = self.database_table.horizontalHeaderItem(5)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"Caixa", None));
-        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
+        ___qtablewidgetitem6 = self.database_table.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"Prateleira", None));
-        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(7)
+        ___qtablewidgetitem7 = self.database_table.horizontalHeaderItem(7)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"Corredor", None));
-        ___qtablewidgetitem8 = self.tableWidget.verticalHeaderItem(0)
+        ___qtablewidgetitem8 = self.database_table.verticalHeaderItem(0)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem9 = self.tableWidget.verticalHeaderItem(1)
+        ___qtablewidgetitem9 = self.database_table.verticalHeaderItem(1)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"2", None));
-        ___qtablewidgetitem10 = self.tableWidget.verticalHeaderItem(2)
+        ___qtablewidgetitem10 = self.database_table.verticalHeaderItem(2)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"3", None));
-        ___qtablewidgetitem11 = self.tableWidget.verticalHeaderItem(3)
+        ___qtablewidgetitem11 = self.database_table.verticalHeaderItem(3)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"4", None));
-        ___qtablewidgetitem12 = self.tableWidget.verticalHeaderItem(4)
+        ___qtablewidgetitem12 = self.database_table.verticalHeaderItem(4)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"5", None));
 
-        __sortingEnabled = self.tableWidget.isSortingEnabled()
-        self.tableWidget.setSortingEnabled(False)
-        ___qtablewidgetitem13 = self.tableWidget.item(0, 0)
+        __sortingEnabled = self.database_table.isSortingEnabled()
+        self.database_table.setSortingEnabled(False)
+        ___qtablewidgetitem13 = self.database_table.item(0, 0)
         ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
-        ___qtablewidgetitem14 = self.tableWidget.item(0, 1)
+        ___qtablewidgetitem14 = self.database_table.item(0, 1)
         ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"660649", None));
-        ___qtablewidgetitem15 = self.tableWidget.item(0, 2)
+        ___qtablewidgetitem15 = self.database_table.item(0, 2)
         ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 82R 5%", None));
-        ___qtablewidgetitem16 = self.tableWidget.item(0, 3)
+        ___qtablewidgetitem16 = self.database_table.item(0, 3)
         ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 82R 5% (PN: CR0603-JW-820ELF) (PN: RK73B1JTTDD820J) (PN: CRGCQ0603F82R) (PN: RC0603JR-0782RL)", None));
-        ___qtablewidgetitem17 = self.tableWidget.item(0, 4)
+        ___qtablewidgetitem17 = self.database_table.item(0, 4)
         ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"5000", None));
-        ___qtablewidgetitem18 = self.tableWidget.item(0, 5)
+        ___qtablewidgetitem18 = self.database_table.item(0, 5)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"20", None));
-        ___qtablewidgetitem19 = self.tableWidget.item(0, 6)
+        ___qtablewidgetitem19 = self.database_table.item(0, 6)
         ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"10", None));
-        ___qtablewidgetitem20 = self.tableWidget.item(0, 7)
+        ___qtablewidgetitem20 = self.database_table.item(0, 7)
         ___qtablewidgetitem20.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem21 = self.tableWidget.item(1, 0)
+        ___qtablewidgetitem21 = self.database_table.item(1, 0)
         ___qtablewidgetitem21.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
-        ___qtablewidgetitem22 = self.tableWidget.item(1, 1)
+        ___qtablewidgetitem22 = self.database_table.item(1, 1)
         ___qtablewidgetitem22.setText(QCoreApplication.translate("MainWindow", u"660630", None));
-        ___qtablewidgetitem23 = self.tableWidget.item(1, 2)
+        ___qtablewidgetitem23 = self.database_table.item(1, 2)
         ___qtablewidgetitem23.setText(QCoreApplication.translate("MainWindow", u"CAPACITOR CER\u00c2MICO SMD 0603 560pF 100V 5% C0G", None));
-        ___qtablewidgetitem24 = self.tableWidget.item(1, 3)
+        ___qtablewidgetitem24 = self.database_table.item(1, 3)
         ___qtablewidgetitem24.setText(QCoreApplication.translate("MainWindow", u"CAPACITOR CER\u00c2MICO SMD 0603 560pF 100V 5% C0G (PN: C1608C0G2A561J080AA) (PN: CC0603JRNPO0BN561) (PN: 0603N561J101CT)", None));
-        ___qtablewidgetitem25 = self.tableWidget.item(1, 4)
+        ___qtablewidgetitem25 = self.database_table.item(1, 4)
         ___qtablewidgetitem25.setText(QCoreApplication.translate("MainWindow", u"7000", None));
-        ___qtablewidgetitem26 = self.tableWidget.item(1, 5)
+        ___qtablewidgetitem26 = self.database_table.item(1, 5)
         ___qtablewidgetitem26.setText(QCoreApplication.translate("MainWindow", u"30", None));
-        ___qtablewidgetitem27 = self.tableWidget.item(1, 6)
+        ___qtablewidgetitem27 = self.database_table.item(1, 6)
         ___qtablewidgetitem27.setText(QCoreApplication.translate("MainWindow", u"4", None));
-        ___qtablewidgetitem28 = self.tableWidget.item(1, 7)
+        ___qtablewidgetitem28 = self.database_table.item(1, 7)
         ___qtablewidgetitem28.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem29 = self.tableWidget.item(2, 0)
+        ___qtablewidgetitem29 = self.database_table.item(2, 0)
         ___qtablewidgetitem29.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
-        ___qtablewidgetitem30 = self.tableWidget.item(2, 1)
+        ___qtablewidgetitem30 = self.database_table.item(2, 1)
         ___qtablewidgetitem30.setText(QCoreApplication.translate("MainWindow", u"660646", None));
-        ___qtablewidgetitem31 = self.tableWidget.item(2, 2)
+        ___qtablewidgetitem31 = self.database_table.item(2, 2)
         ___qtablewidgetitem31.setText(QCoreApplication.translate("MainWindow", u"MICROCONTROLADOR (PN: STM32G070RBT6)", None));
-        ___qtablewidgetitem32 = self.tableWidget.item(2, 3)
+        ___qtablewidgetitem32 = self.database_table.item(2, 3)
         ___qtablewidgetitem32.setText(QCoreApplication.translate("MainWindow", u"MICROCONTROLADOR (PN: STM32G070RBT6)", None));
-        ___qtablewidgetitem33 = self.tableWidget.item(2, 4)
+        ___qtablewidgetitem33 = self.database_table.item(2, 4)
         ___qtablewidgetitem33.setText(QCoreApplication.translate("MainWindow", u"10", None));
-        ___qtablewidgetitem34 = self.tableWidget.item(2, 5)
+        ___qtablewidgetitem34 = self.database_table.item(2, 5)
         ___qtablewidgetitem34.setText(QCoreApplication.translate("MainWindow", u"45", None));
-        ___qtablewidgetitem35 = self.tableWidget.item(2, 6)
+        ___qtablewidgetitem35 = self.database_table.item(2, 6)
         ___qtablewidgetitem35.setText(QCoreApplication.translate("MainWindow", u"3", None));
-        ___qtablewidgetitem36 = self.tableWidget.item(2, 7)
+        ___qtablewidgetitem36 = self.database_table.item(2, 7)
         ___qtablewidgetitem36.setText(QCoreApplication.translate("MainWindow", u"2", None));
-        ___qtablewidgetitem37 = self.tableWidget.item(3, 0)
+        ___qtablewidgetitem37 = self.database_table.item(3, 0)
         ___qtablewidgetitem37.setText(QCoreApplication.translate("MainWindow", u"Ativo", None));
-        ___qtablewidgetitem38 = self.tableWidget.item(3, 1)
+        ___qtablewidgetitem38 = self.database_table.item(3, 1)
         ___qtablewidgetitem38.setText(QCoreApplication.translate("MainWindow", u"660488", None));
-        ___qtablewidgetitem39 = self.tableWidget.item(3, 2)
+        ___qtablewidgetitem39 = self.database_table.item(3, 2)
         ___qtablewidgetitem39.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 470K 5%", None));
-        ___qtablewidgetitem40 = self.tableWidget.item(3, 3)
+        ___qtablewidgetitem40 = self.database_table.item(3, 3)
         ___qtablewidgetitem40.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0603 470K 5% (PN: CR0603-JW-474ELF) (PN: AC0603JR-07470KL) (PN: RK73B1JTTD474J) (PN: ERJ-3GEYJ474V)", None));
-        ___qtablewidgetitem41 = self.tableWidget.item(3, 4)
+        ___qtablewidgetitem41 = self.database_table.item(3, 4)
         ___qtablewidgetitem41.setText(QCoreApplication.translate("MainWindow", u"10000", None));
-        ___qtablewidgetitem42 = self.tableWidget.item(3, 5)
+        ___qtablewidgetitem42 = self.database_table.item(3, 5)
         ___qtablewidgetitem42.setText(QCoreApplication.translate("MainWindow", u"3", None));
-        ___qtablewidgetitem43 = self.tableWidget.item(3, 6)
+        ___qtablewidgetitem43 = self.database_table.item(3, 6)
         ___qtablewidgetitem43.setText(QCoreApplication.translate("MainWindow", u"1", None));
-        ___qtablewidgetitem44 = self.tableWidget.item(3, 7)
+        ___qtablewidgetitem44 = self.database_table.item(3, 7)
         ___qtablewidgetitem44.setText(QCoreApplication.translate("MainWindow", u"2", None));
-        ___qtablewidgetitem45 = self.tableWidget.item(4, 0)
+        ___qtablewidgetitem45 = self.database_table.item(4, 0)
         ___qtablewidgetitem45.setText(QCoreApplication.translate("MainWindow", u"Inativo", None));
-        ___qtablewidgetitem46 = self.tableWidget.item(4, 1)
+        ___qtablewidgetitem46 = self.database_table.item(4, 1)
         ___qtablewidgetitem46.setText(QCoreApplication.translate("MainWindow", u"772892", None));
-        ___qtablewidgetitem47 = self.tableWidget.item(4, 2)
+        ___qtablewidgetitem47 = self.database_table.item(4, 2)
         ___qtablewidgetitem47.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0805 510mR 1% 1/4W", None));
-        ___qtablewidgetitem48 = self.tableWidget.item(4, 3)
+        ___qtablewidgetitem48 = self.database_table.item(4, 3)
         ___qtablewidgetitem48.setText(QCoreApplication.translate("MainWindow", u"RESISTOR SMD 0805 510mR 1% 1/4W (PN: KDV08DR510ET\u200e) (PN: ERJ-6DQFR51V) (PN: RL0805FR-7W0R51L)", None));
-        ___qtablewidgetitem49 = self.tableWidget.item(4, 4)
+        ___qtablewidgetitem49 = self.database_table.item(4, 4)
         ___qtablewidgetitem49.setText(QCoreApplication.translate("MainWindow", u"800", None));
-        ___qtablewidgetitem50 = self.tableWidget.item(4, 5)
+        ___qtablewidgetitem50 = self.database_table.item(4, 5)
         ___qtablewidgetitem50.setText(QCoreApplication.translate("MainWindow", u"22", None));
-        ___qtablewidgetitem51 = self.tableWidget.item(4, 6)
+        ___qtablewidgetitem51 = self.database_table.item(4, 6)
         ___qtablewidgetitem51.setText(QCoreApplication.translate("MainWindow", u"5", None));
-        ___qtablewidgetitem52 = self.tableWidget.item(4, 7)
+        ___qtablewidgetitem52 = self.database_table.item(4, 7)
         ___qtablewidgetitem52.setText(QCoreApplication.translate("MainWindow", u"5", None));
-        self.tableWidget.setSortingEnabled(__sortingEnabled)
+        self.database_table.setSortingEnabled(__sortingEnabled)
 
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Data Base", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Aguardando Padroniza\u00e7\u00e3o", None))

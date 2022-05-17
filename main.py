@@ -6,7 +6,6 @@
 # ########################################################################### #
 # IMPORTS
 # ########################################################################### #
-from threading import Lock
 from threading import Thread
 import sys
 import os
@@ -82,6 +81,39 @@ class MainWindow(QMainWindow):
         self.ui.exportCsvOmieToHdBtn.clicked.connect(
             lambda: thread_export_excel_sheet_omie()
         )
+
+        self.ui.createTable_databaseBtn.clicked.connect(
+            lambda: createTable_database_basic()
+        )
+
+        self.ui.createTableDatabaseFullBtn.clicked.connect(
+            lambda: createTable_database_full()
+        )
+
+    # def create_table_widget(self, rowPosition, columnPosition, text, tableName):
+    #     qtablewidgetitem = QTableWidgetItem()
+
+    #     # USER getattr() METHOD
+    #     getattr(self.ui, tableName).setItem(
+    #         rowPosition, columnPosition, qtablewidgetitem)
+    #     qtablewidgetitem = getattr(self.ui, tableName).item(
+    #         rowPosition, columnPosition)
+
+    #     qtablewidgetitem.setText(text)
+
+    # def createTable_database_basic(self):
+    #     for x in range(10):
+    #         rowPosition = self.ui.database_table.rowCount()
+    #         self.ui.database_table.insertRow(rowPosition)
+
+    #         self.create_table_widget(
+    #             rowPosition, 0, f'Teste {x}', 'database_table')
+    #         self.create_table_widget(
+    #             rowPosition, 1, f'Teste {x}', 'database_table')
+    #         self.create_table_widget(
+    #             rowPosition, 2, f'Teste {x}', 'database_table')
+    #         self.create_table_widget(
+    #             rowPosition, 3, f'Teste {x}', 'database_table')
 
 
 # ########################################################################### #
