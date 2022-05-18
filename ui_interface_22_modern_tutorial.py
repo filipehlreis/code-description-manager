@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialueazGq.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialQmmoZx.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -598,10 +598,14 @@ class Ui_MainWindow(object):
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
         self.database_search = QLineEdit(self.frame_13)
         self.database_search.setObjectName(u"database_search")
-        self.database_search.setMinimumSize(QSize(200, 0))
+        self.database_search.setMinimumSize(QSize(200, 26))
+        font3 = QFont()
+        font3.setFamily(u"Open Sans")
+        font3.setPointSize(10)
+        self.database_search.setFont(font3)
         self.database_search.setStyleSheet(u"\n"
 "QLineEdit {\n"
-"	border: solid 1px white;\n"
+"	border: 1px solid #94B0DA;\n"
 "}")
 
         self.horizontalLayout_15.addWidget(self.database_search, 0, Qt.AlignRight|Qt.AlignTop)
@@ -613,15 +617,15 @@ class Ui_MainWindow(object):
         self.pushButton.setIcon(icon19)
         self.pushButton.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_15.addWidget(self.pushButton, 0, Qt.AlignRight|Qt.AlignTop)
+        self.horizontalLayout_15.addWidget(self.pushButton, 0, Qt.AlignRight|Qt.AlignVCenter)
 
 
         self.verticalLayout_17.addWidget(self.frame_13, 0, Qt.AlignRight|Qt.AlignTop)
 
         self.frame_12 = QFrame(self.dataPage)
         self.frame_12.setObjectName(u"frame_12")
-        sizePolicy3.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
-        self.frame_12.setSizePolicy(sizePolicy3)
+        sizePolicy4.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
+        self.frame_12.setSizePolicy(sizePolicy4)
         self.frame_12.setMinimumSize(QSize(0, 0))
         self.frame_12.setFrameShape(QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QFrame.Raised)
@@ -750,27 +754,33 @@ class Ui_MainWindow(object):
         sizePolicy5.setHeightForWidth(self.database_table.sizePolicy().hasHeightForWidth())
         self.database_table.setSizePolicy(sizePolicy5)
         self.database_table.setMinimumSize(QSize(0, 220))
-        font3 = QFont()
-        font3.setFamily(u"Open Sans")
-        font3.setPointSize(10)
-        font3.setBold(False)
-        font3.setItalic(False)
-        font3.setWeight(50)
-        self.database_table.setFont(font3)
+        font4 = QFont()
+        font4.setFamily(u"Open Sans")
+        font4.setPointSize(10)
+        font4.setBold(False)
+        font4.setItalic(False)
+        font4.setWeight(50)
+        self.database_table.setFont(font4)
         self.database_table.setStyleSheet(u"\n"
-"QHeaderView::section {\n"
+"QHeaderView::section{\n"
 "    background-color: #30B28C;\n"
 "	font: bold 12pt \"Open Sans\";\n"
 "\n"
-"    border: solid;\n"
+"\n"
+"    border: none;\n"
 "    height: 30px;\n"
 "}\n"
+"\n"
 "\n"
 "QTableWidget {\n"
 "	height: 100%;\n"
 "	font: normal 10pt \"Open Sans\";\n"
 "}\n"
-"")
+"\n"
+"QTableWidget::item:selected{\n"
+"	background-color: #21366E;\n"
+"	color: white;\n"
+"}")
         self.database_table.setFrameShape(QFrame.StyledPanel)
         self.database_table.setFrameShadow(QFrame.Sunken)
         self.database_table.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
@@ -962,12 +972,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
         self.label_14 = QLabel(self.popupNotificationSubContainer)
         self.label_14.setObjectName(u"label_14")
-        font4 = QFont()
-        font4.setFamily(u"Noto Sans")
-        font4.setPointSize(10)
-        font4.setBold(True)
-        font4.setWeight(75)
-        self.label_14.setFont(font4)
+        font5 = QFont()
+        font5.setFamily(u"Noto Sans")
+        font5.setPointSize(10)
+        font5.setBold(True)
+        font5.setWeight(75)
+        self.label_14.setFont(font5)
 
         self.verticalLayout_20.addWidget(self.label_14)
 
@@ -1017,6 +1027,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
         self.label_15 = QLabel(self.frame_10)
         self.label_15.setObjectName(u"label_15")
+        font6 = QFont()
+        font6.setFamily(u"Open Sans")
+        font6.setPointSize(9)
+        self.label_15.setFont(font6)
 
         self.horizontalLayout_12.addWidget(self.label_15)
 
@@ -1027,20 +1041,20 @@ class Ui_MainWindow(object):
         self.sizeGrip.setObjectName(u"sizeGrip")
         self.sizeGrip.setMinimumSize(QSize(30, 30))
         self.sizeGrip.setMaximumSize(QSize(30, 30))
-        font5 = QFont()
-        font5.setPointSize(10)
-        self.sizeGrip.setFont(font5)
+        font7 = QFont()
+        font7.setPointSize(10)
+        self.sizeGrip.setFont(font7)
         self.sizeGrip.setFrameShape(QFrame.StyledPanel)
         self.sizeGrip.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_13 = QHBoxLayout(self.sizeGrip)
         self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
         self.label_21 = QLabel(self.sizeGrip)
         self.label_21.setObjectName(u"label_21")
-        font6 = QFont()
-        font6.setPointSize(7)
-        font6.setBold(True)
-        font6.setWeight(75)
-        self.label_21.setFont(font6)
+        font8 = QFont()
+        font8.setPointSize(7)
+        font8.setBold(True)
+        font8.setWeight(75)
+        self.label_21.setFont(font8)
         self.label_21.setLayoutDirection(Qt.RightToLeft)
         self.label_21.setStyleSheet(u"color: #30B28C;\n"
 "text-align: center-center,")
