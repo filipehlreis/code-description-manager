@@ -128,6 +128,16 @@ def createTable_database_basic():
             window, rowPosition, 7, f'Teste {x}', 'database_table')
 
 
+def on_click(index):
+    window = findWindowApplication()
+    row = index.row()
+    # column = index.column()
+    codigo = window.ui.database_table.item(row, 1).text()
+    print(codigo)
+
+    # print(window.ui.database_table.createIndex())
+
+
 def createTable_database_full():
     global database_pandas
 

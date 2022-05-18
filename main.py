@@ -6,6 +6,7 @@
 # ########################################################################### #
 # IMPORTS
 # ########################################################################### #
+from PyQt5 import QtCore, QtWidgets
 from threading import Thread
 import sys
 import os
@@ -95,6 +96,8 @@ class MainWindow(QMainWindow):
 
         self.ui.database_search.textChanged.connect(findName)
 
+        self.ui.database_table.doubleClicked.connect(on_click)
+
     # def create_table_widget(self, rowPosition, columnPosition, text, tableName):
     #     qtablewidgetitem = QTableWidgetItem()
 
@@ -131,6 +134,7 @@ if __name__ == "__main__":
     window.show()
     t = Thread(target=import_database_from_excel_backup, args=())
     t.start()
+
     sys.exit(app.exec_())
 
 
