@@ -1222,6 +1222,10 @@ QTableWidget {
 	font: normal 10pt &quot;Open Sans&quot;;
 }
 
+QTableWidget::item:selected{
+	background-color: #21366E;
+	color: white;
+}
 </string>
                       </property>
                       <property name="frameShape">

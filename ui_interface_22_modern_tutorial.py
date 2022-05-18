@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialQmmoZx.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialXizFTG.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -780,7 +780,8 @@ class Ui_MainWindow(object):
 "QTableWidget::item:selected{\n"
 "	background-color: #21366E;\n"
 "	color: white;\n"
-"}")
+"}\n"
+"")
         self.database_table.setFrameShape(QFrame.StyledPanel)
         self.database_table.setFrameShadow(QFrame.Sunken)
         self.database_table.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
