@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1040</width>
-    <height>609</height>
+    <height>628</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -38,6 +38,7 @@
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 	margin: 1px 0px;
+	font: normal 10pt &quot;Open Sans&quot;;
 
 }
 #leftMenuSubContainer QPushButton:hover {
@@ -75,7 +76,9 @@ border-radius: 10px;
 
 #closeBtn:hover {
 	background-color: #8B2635;
-}</string>
+}
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -101,7 +104,7 @@ border-radius: 10px;
      <widget class="QCustomSlideMenu" name="leftMenuContainer" native="true">
       <property name="maximumSize">
        <size>
-        <width>200</width>
+        <width>215</width>
         <height>16777215</height>
        </size>
       </property>
@@ -238,6 +241,11 @@ border-radius: 10px;
                </property>
                <property name="font">
                 <font>
+                 <family>Open Sans</family>
+                 <pointsize>10</pointsize>
+                 <weight>50</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
                  <stylestrategy>PreferAntialias</stylestrategy>
                 </font>
                </property>
@@ -1179,19 +1187,23 @@ QLineEdit {
                       <property name="minimumSize">
                        <size>
                         <width>0</width>
-                        <height>300</height>
+                        <height>220</height>
                        </size>
                       </property>
                       <property name="font">
                        <font>
-                        <family>Montserrat Medium</family>
+                        <family>Open Sans</family>
                         <pointsize>10</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
                        </font>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">QHeaderView::section {
+                       <string notr="true">
+QHeaderView::section {
     background-color: #30B28C;
-	font: bold 10pt &quot;Arial&quot;;
+	font: bold 12pt &quot;Open Sans&quot;;
 
     border: solid;
     height: 30px;
@@ -1199,7 +1211,9 @@ QLineEdit {
 
 QTableWidget {
 	height: 100%;
-}</string>
+	font: normal 10pt &quot;Open Sans&quot;;
+}
+</string>
                       </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
@@ -1524,6 +1538,19 @@ QTableWidget {
                     </item>
                    </layout>
                   </widget>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
                  </item>
                 </layout>
                </widget>

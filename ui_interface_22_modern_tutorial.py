@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialFJwvRz.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialueazGq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1040, 609)
+        MainWindow.resize(1040, 628)
         MainWindow.setStyleSheet(u"*{\n"
 "	border: none;\n"
 "	background-color: transparent;\n"
@@ -46,6 +46,7 @@ class Ui_MainWindow(object):
 "	border-top-right-radius: 10px;\n"
 "	border-bottom-right-radius: 10px;\n"
 "	margin: 1px 0px;\n"
+"	font: normal 10pt \"Open Sans\";\n"
 "\n"
 "}\n"
 "#leftMenuSubContainer QPushButton:hover {\n"
@@ -67,9 +68,9 @@ class Ui_MainWindow(object):
 "\n"
 "\n"
 "\n"
-"\n"
-"#closeBtn, #minimizeBtn, #restor"
-                        "eBtn{\n"
+""
+                        "\n"
+"#closeBtn, #minimizeBtn, #restoreBtn{\n"
 "	text-align: center;\n"
 "	padding: 4px 4px 4px 4px;\n"
 "	border-top-left-radius: 5px;\n"
@@ -84,7 +85,9 @@ class Ui_MainWindow(object):
 "\n"
 "#closeBtn:hover {\n"
 "	background-color: #8B2635;\n"
-"}")
+"}\n"
+"\n"
+"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"")
@@ -94,7 +97,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.leftMenuContainer = QCustomSlideMenu(self.centralwidget)
         self.leftMenuContainer.setObjectName(u"leftMenuContainer")
-        self.leftMenuContainer.setMaximumSize(QSize(200, 16777215))
+        self.leftMenuContainer.setMaximumSize(QSize(215, 16777215))
         self.verticalLayout = QVBoxLayout(self.leftMenuContainer)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -149,6 +152,11 @@ class Ui_MainWindow(object):
         self.homeBtn.setSizePolicy(sizePolicy1)
         self.homeBtn.setSizeIncrement(QSize(0, 0))
         font = QFont()
+        font.setFamily(u"Open Sans")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
         font.setStyleStrategy(QFont.PreferAntialias)
         self.homeBtn.setFont(font)
         self.homeBtn.setLayoutDirection(Qt.LeftToRight)
@@ -741,14 +749,18 @@ class Ui_MainWindow(object):
         sizePolicy5.setVerticalStretch(0)
         sizePolicy5.setHeightForWidth(self.database_table.sizePolicy().hasHeightForWidth())
         self.database_table.setSizePolicy(sizePolicy5)
-        self.database_table.setMinimumSize(QSize(0, 300))
+        self.database_table.setMinimumSize(QSize(0, 220))
         font3 = QFont()
-        font3.setFamily(u"Montserrat Medium")
+        font3.setFamily(u"Open Sans")
         font3.setPointSize(10)
+        font3.setBold(False)
+        font3.setItalic(False)
+        font3.setWeight(50)
         self.database_table.setFont(font3)
-        self.database_table.setStyleSheet(u"QHeaderView::section {\n"
+        self.database_table.setStyleSheet(u"\n"
+"QHeaderView::section {\n"
 "    background-color: #30B28C;\n"
-"	font: bold 10pt \"Arial\";\n"
+"	font: bold 12pt \"Open Sans\";\n"
 "\n"
 "    border: solid;\n"
 "    height: 30px;\n"
@@ -756,7 +768,9 @@ class Ui_MainWindow(object):
 "\n"
 "QTableWidget {\n"
 "	height: 100%;\n"
-"}")
+"	font: normal 10pt \"Open Sans\";\n"
+"}\n"
+"")
         self.database_table.setFrameShape(QFrame.StyledPanel)
         self.database_table.setFrameShadow(QFrame.Sunken)
         self.database_table.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
@@ -777,6 +791,10 @@ class Ui_MainWindow(object):
 
 
         self.verticalLayout_17.addWidget(self.frame_12)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_17.addItem(self.verticalSpacer_2)
 
         self.mainPages.addWidget(self.dataPage)
         self.waitingPage = QWidget()
