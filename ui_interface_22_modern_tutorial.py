@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialpQwJwS.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialJgMraE.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -21,7 +21,12 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1305, 617)
+        MainWindow.resize(2092, 1028)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setStyleSheet(u"*{\n"
 "	border: none;\n"
 "	background-color: transparent;\n"
@@ -66,10 +71,24 @@ class Ui_MainWindow(object):
 "	background-color: #2c313c;\n"
 "}\n"
 "\n"
+"#addCodeC"
+                        "ontainer QLabel {\n"
+"	font: normal 12pt \"Open Sans\";\n"
+"}\n"
 "\n"
 "\n"
-""
-                        "\n"
+"#addCodeSubContainer QLineEdit {\n"
+"	border-bottom: 2px solid #30B28C;\n"
+"	width: 300px;\n"
+"	min-height: 20px;\n"
+"	font: normal 10pt \"Open Sans\";\n"
+"}\n"
+"\n"
+"#addCodeSubContainer QLabel{\n"
+"	font: normal 10pt \"Open Sans\";\n"
+"}\n"
+"\n"
+"\n"
 "#closeBtn, #minimizeBtn, #restoreBtn{\n"
 "	text-align: center;\n"
 "	padding: 4px 4px 4px 4px;\n"
@@ -131,9 +150,6 @@ class Ui_MainWindow(object):
 
         self.frame_2 = QFrame(self.leftMenuSubContainer)
         self.frame_2.setObjectName(u"frame_2")
-        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
         self.frame_2.setSizePolicy(sizePolicy)
         self.frame_2.setFrameShape(QFrame.StyledPanel)
@@ -413,9 +429,7 @@ class Ui_MainWindow(object):
         self.mainBodyContainer.setSizePolicy(sizePolicy2)
         self.mainBodyContainer.setStyleSheet(u"")
         self.verticalLayout_10 = QVBoxLayout(self.mainBodyContainer)
-        self.verticalLayout_10.setSpacing(0)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
         self.headerContainer = QWidget(self.mainBodyContainer)
         self.headerContainer.setObjectName(u"headerContainer")
         self.horizontalLayout_5 = QHBoxLayout(self.headerContainer)
@@ -522,7 +536,201 @@ class Ui_MainWindow(object):
         self.horizontalLayout_5.addWidget(self.frame_7, 0, Qt.AlignRight)
 
 
-        self.verticalLayout_10.addWidget(self.headerContainer, 0, Qt.AlignTop)
+        self.verticalLayout_10.addWidget(self.headerContainer)
+
+        self.addCodeContainer = QFrame(self.mainBodyContainer)
+        self.addCodeContainer.setObjectName(u"addCodeContainer")
+        self.addCodeContainer.setMinimumSize(QSize(0, 300))
+        self.addCodeContainer.setFrameShape(QFrame.StyledPanel)
+        self.addCodeContainer.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_28 = QVBoxLayout(self.addCodeContainer)
+        self.verticalLayout_28.setObjectName(u"verticalLayout_28")
+        self.headerContainer_3 = QFrame(self.addCodeContainer)
+        self.headerContainer_3.setObjectName(u"headerContainer_3")
+        self.headerContainer_3.setFrameShape(QFrame.StyledPanel)
+        self.headerContainer_3.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_23 = QHBoxLayout(self.headerContainer_3)
+        self.horizontalLayout_23.setObjectName(u"horizontalLayout_23")
+        self.label_23 = QLabel(self.headerContainer_3)
+        self.label_23.setObjectName(u"label_23")
+
+        self.horizontalLayout_23.addWidget(self.label_23, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_28.addWidget(self.headerContainer_3)
+
+        self.addCodeSubContainer = QFrame(self.addCodeContainer)
+        self.addCodeSubContainer.setObjectName(u"addCodeSubContainer")
+        self.addCodeSubContainer.setMinimumSize(QSize(0, 0))
+        self.addCodeSubContainer.setFrameShape(QFrame.StyledPanel)
+        self.addCodeSubContainer.setFrameShadow(QFrame.Raised)
+        self.formLayout = QFormLayout(self.addCodeSubContainer)
+        self.formLayout.setObjectName(u"formLayout")
+        self.frame_20 = QFrame(self.addCodeSubContainer)
+        self.frame_20.setObjectName(u"frame_20")
+        self.frame_20.setFrameShape(QFrame.StyledPanel)
+        self.frame_20.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_24 = QHBoxLayout(self.frame_20)
+        self.horizontalLayout_24.setObjectName(u"horizontalLayout_24")
+        self.label_35 = QLabel(self.frame_20)
+        self.label_35.setObjectName(u"label_35")
+
+        self.horizontalLayout_24.addWidget(self.label_35, 0, Qt.AlignLeft)
+
+        self.lineEdit_12 = QLineEdit(self.frame_20)
+        self.lineEdit_12.setObjectName(u"lineEdit_12")
+        self.lineEdit_12.setMinimumSize(QSize(300, 22))
+        self.lineEdit_12.setMaximumSize(QSize(300, 16777215))
+
+        self.horizontalLayout_24.addWidget(self.lineEdit_12)
+
+
+        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.frame_20)
+
+        self.frame_16 = QFrame(self.addCodeSubContainer)
+        self.frame_16.setObjectName(u"frame_16")
+        self.frame_16.setFrameShape(QFrame.StyledPanel)
+        self.frame_16.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_18 = QHBoxLayout(self.frame_16)
+        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
+        self.label_30 = QLabel(self.frame_16)
+        self.label_30.setObjectName(u"label_30")
+
+        self.horizontalLayout_18.addWidget(self.label_30, 0, Qt.AlignLeft)
+
+        self.lineEdit_7 = QLineEdit(self.frame_16)
+        self.lineEdit_7.setObjectName(u"lineEdit_7")
+        self.lineEdit_7.setMinimumSize(QSize(300, 22))
+
+        self.horizontalLayout_18.addWidget(self.lineEdit_7, 0, Qt.AlignLeft)
+
+
+        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.frame_16)
+
+        self.frame_17 = QFrame(self.addCodeSubContainer)
+        self.frame_17.setObjectName(u"frame_17")
+        self.frame_17.setFrameShape(QFrame.StyledPanel)
+        self.frame_17.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_19 = QHBoxLayout(self.frame_17)
+        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
+        self.label_31 = QLabel(self.frame_17)
+        self.label_31.setObjectName(u"label_31")
+
+        self.horizontalLayout_19.addWidget(self.label_31, 0, Qt.AlignLeft)
+
+        self.lineEdit_8 = QLineEdit(self.frame_17)
+        self.lineEdit_8.setObjectName(u"lineEdit_8")
+
+        self.horizontalLayout_19.addWidget(self.lineEdit_8, 0, Qt.AlignLeft)
+
+
+        self.formLayout.setWidget(2, QFormLayout.FieldRole, self.frame_17)
+
+        self.frame_15 = QFrame(self.addCodeSubContainer)
+        self.frame_15.setObjectName(u"frame_15")
+        self.frame_15.setFrameShape(QFrame.StyledPanel)
+        self.frame_15.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_17 = QHBoxLayout(self.frame_15)
+        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.label_29 = QLabel(self.frame_15)
+        self.label_29.setObjectName(u"label_29")
+
+        self.horizontalLayout_17.addWidget(self.label_29, 0, Qt.AlignLeft)
+
+        self.lineEdit_6 = QLineEdit(self.frame_15)
+        self.lineEdit_6.setObjectName(u"lineEdit_6")
+
+        self.horizontalLayout_17.addWidget(self.lineEdit_6, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.formLayout.setWidget(6, QFormLayout.FieldRole, self.frame_15)
+
+        self.frame_19 = QFrame(self.addCodeSubContainer)
+        self.frame_19.setObjectName(u"frame_19")
+        self.frame_19.setFrameShape(QFrame.StyledPanel)
+        self.frame_19.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_21 = QHBoxLayout(self.frame_19)
+        self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
+        self.label_33 = QLabel(self.frame_19)
+        self.label_33.setObjectName(u"label_33")
+
+        self.horizontalLayout_21.addWidget(self.label_33, 0, Qt.AlignLeft)
+
+        self.lineEdit_10 = QLineEdit(self.frame_19)
+        self.lineEdit_10.setObjectName(u"lineEdit_10")
+
+        self.horizontalLayout_21.addWidget(self.lineEdit_10, 0, Qt.AlignLeft)
+
+
+        self.formLayout.setWidget(8, QFormLayout.FieldRole, self.frame_19)
+
+        self.frame_21 = QFrame(self.addCodeSubContainer)
+        self.frame_21.setObjectName(u"frame_21")
+        self.frame_21.setFrameShape(QFrame.StyledPanel)
+        self.frame_21.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_25 = QHBoxLayout(self.frame_21)
+        self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
+        self.label_36 = QLabel(self.frame_21)
+        self.label_36.setObjectName(u"label_36")
+
+        self.horizontalLayout_25.addWidget(self.label_36, 0, Qt.AlignLeft)
+
+        self.lineEdit_13 = QLineEdit(self.frame_21)
+        self.lineEdit_13.setObjectName(u"lineEdit_13")
+        self.lineEdit_13.setMaximumSize(QSize(300, 16777215))
+
+        self.horizontalLayout_25.addWidget(self.lineEdit_13)
+
+
+        self.formLayout.setWidget(4, QFormLayout.FieldRole, self.frame_21)
+
+        self.frame_18 = QFrame(self.addCodeSubContainer)
+        self.frame_18.setObjectName(u"frame_18")
+        self.frame_18.setFrameShape(QFrame.StyledPanel)
+        self.frame_18.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_20 = QHBoxLayout(self.frame_18)
+        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
+        self.label_32 = QLabel(self.frame_18)
+        self.label_32.setObjectName(u"label_32")
+
+        self.horizontalLayout_20.addWidget(self.label_32, 0, Qt.AlignLeft)
+
+        self.lineEdit_9 = QLineEdit(self.frame_18)
+        self.lineEdit_9.setObjectName(u"lineEdit_9")
+        self.lineEdit_9.setMaximumSize(QSize(300, 16777215))
+
+        self.horizontalLayout_20.addWidget(self.lineEdit_9)
+
+
+        self.formLayout.setWidget(3, QFormLayout.FieldRole, self.frame_18)
+
+        self.frame_14 = QFrame(self.addCodeSubContainer)
+        self.frame_14.setObjectName(u"frame_14")
+        self.frame_14.setMaximumSize(QSize(16777215, 1666666))
+        self.frame_14.setFrameShape(QFrame.StyledPanel)
+        self.frame_14.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_16 = QHBoxLayout(self.frame_14)
+        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
+        self.label_22 = QLabel(self.frame_14)
+        self.label_22.setObjectName(u"label_22")
+        sizePolicy.setHeightForWidth(self.label_22.sizePolicy().hasHeightForWidth())
+        self.label_22.setSizePolicy(sizePolicy)
+
+        self.horizontalLayout_16.addWidget(self.label_22, 0, Qt.AlignLeft)
+
+        self.lineEdit = QLineEdit(self.frame_14)
+        self.lineEdit.setObjectName(u"lineEdit")
+
+        self.horizontalLayout_16.addWidget(self.lineEdit, 0, Qt.AlignLeft)
+
+
+        self.formLayout.setWidget(5, QFormLayout.FieldRole, self.frame_14)
+
+
+        self.verticalLayout_28.addWidget(self.addCodeSubContainer, 0, Qt.AlignHCenter)
+
+
+        self.verticalLayout_10.addWidget(self.addCodeContainer)
 
         self.mainBodyContent = QWidget(self.mainBodyContainer)
         self.mainBodyContent.setObjectName(u"mainBodyContent")
@@ -531,7 +739,7 @@ class Ui_MainWindow(object):
         sizePolicy3.setVerticalStretch(0)
         sizePolicy3.setHeightForWidth(self.mainBodyContent.sizePolicy().hasHeightForWidth())
         self.mainBodyContent.setSizePolicy(sizePolicy3)
-        self.mainBodyContent.setMinimumSize(QSize(500, 419))
+        self.mainBodyContent.setMinimumSize(QSize(500, 420))
         self.horizontalLayout_8 = QHBoxLayout(self.mainBodyContent)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.mainContentsContainer = QWidget(self.mainBodyContent)
@@ -610,21 +818,22 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_15.addWidget(self.pushButton_4)
 
-        self.pushButton_5 = QPushButton(self.frame_13)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        sizePolicy6.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
-        self.pushButton_5.setSizePolicy(sizePolicy6)
-        self.pushButton_5.setMinimumSize(QSize(100, 0))
+        self.addEmptyCodeBtn = QPushButton(self.frame_13)
+        self.addEmptyCodeBtn.setObjectName(u"addEmptyCodeBtn")
+        sizePolicy6.setHeightForWidth(self.addEmptyCodeBtn.sizePolicy().hasHeightForWidth())
+        self.addEmptyCodeBtn.setSizePolicy(sizePolicy6)
+        self.addEmptyCodeBtn.setMinimumSize(QSize(100, 0))
+        self.addEmptyCodeBtn.setStyleSheet(u"background-color: #1F232A;")
 
-        self.horizontalLayout_15.addWidget(self.pushButton_5)
+        self.horizontalLayout_15.addWidget(self.addEmptyCodeBtn)
 
-        self.pushButton_6 = QPushButton(self.frame_13)
-        self.pushButton_6.setObjectName(u"pushButton_6")
-        sizePolicy6.setHeightForWidth(self.pushButton_6.sizePolicy().hasHeightForWidth())
-        self.pushButton_6.setSizePolicy(sizePolicy6)
-        self.pushButton_6.setMinimumSize(QSize(100, 0))
+        self.addCodeWindowBtn = QPushButton(self.frame_13)
+        self.addCodeWindowBtn.setObjectName(u"addCodeWindowBtn")
+        sizePolicy6.setHeightForWidth(self.addCodeWindowBtn.sizePolicy().hasHeightForWidth())
+        self.addCodeWindowBtn.setSizePolicy(sizePolicy6)
+        self.addCodeWindowBtn.setMinimumSize(QSize(100, 0))
 
-        self.horizontalLayout_15.addWidget(self.pushButton_6)
+        self.horizontalLayout_15.addWidget(self.addCodeWindowBtn)
 
         self.database_search = QLineEdit(self.frame_13)
         self.database_search.setObjectName(u"database_search")
@@ -1108,9 +1317,9 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.centerMenuPages.setCurrentIndex(1)
+        self.centerMenuPages.setCurrentIndex(2)
         self.mainPages.setCurrentIndex(1)
-        self.rightMenuPages.setCurrentIndex(1)
+        self.rightMenuPages.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1197,6 +1406,26 @@ class Ui_MainWindow(object):
         self.closeBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Window", None))
 #endif // QT_CONFIG(tooltip)
         self.closeBtn.setText("")
+        self.label_23.setText(QCoreApplication.translate("MainWindow", u"Adicionar Cadastro de Item no Banco de Dados", None))
+        self.label_35.setText(QCoreApplication.translate("MainWindow", u"STATUS", None))
+#if QT_CONFIG(tooltip)
+        self.lineEdit_12.setToolTip("")
+#endif // QT_CONFIG(tooltip)
+        self.lineEdit_12.setPlaceholderText(QCoreApplication.translate("MainWindow", u"STATUS", None))
+        self.label_30.setText(QCoreApplication.translate("MainWindow", u"C\u00d3DIGO", None))
+        self.lineEdit_7.setPlaceholderText(QCoreApplication.translate("MainWindow", u"C\u00d3DIGO", None))
+        self.label_31.setText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O SIMPLIFICADA", None))
+        self.lineEdit_8.setPlaceholderText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O SIMPLIFICADA", None))
+        self.label_29.setText(QCoreApplication.translate("MainWindow", u"PRATELEIRA", None))
+        self.lineEdit_6.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PRATELEIRA", None))
+        self.label_33.setText(QCoreApplication.translate("MainWindow", u"CORREDOR", None))
+        self.lineEdit_10.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CORREDOR", None))
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"QUANTIDADE", None))
+        self.lineEdit_13.setPlaceholderText(QCoreApplication.translate("MainWindow", u"QUANTIDADE", None))
+        self.label_32.setText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O COMPLETA", None))
+        self.lineEdit_9.setPlaceholderText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O COMPLETA", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"CAIXA", None))
+        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CAIXA", None))
         self.importCsvOmieBtn.setText(QCoreApplication.translate("MainWindow", u"Importar arquivo EXCEL do OMIE", None))
         self.exportCsvOmieToHdBtn.setText(QCoreApplication.translate("MainWindow", u"Gravar CSV tratado no HD", None))
         self.createTable_databaseBtn.setText(QCoreApplication.translate("MainWindow", u"Inserir tabela basica no banco de dados", None))
@@ -1204,8 +1433,8 @@ class Ui_MainWindow(object):
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Banco de Dados", None))
         self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.addEmptyCodeBtn.setText(QCoreApplication.translate("MainWindow", u"Adicionar Cadastro Base", None))
+        self.addCodeWindowBtn.setText(QCoreApplication.translate("MainWindow", u"Adicionar Cadastro", None))
         self.database_search.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.pushButton.setText("")
         ___qtablewidgetitem = self.database_table.horizontalHeaderItem(0)

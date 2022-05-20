@@ -6,6 +6,7 @@
 # ########################################################################### #
 # IMPORTS
 # ########################################################################### #
+from time import sleep
 from PyQt5 import QtCore, QtWidgets
 from threading import Thread
 import sys
@@ -34,6 +35,8 @@ class MainWindow(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+
+        # self.resize(900, 600)
 
         #######################################################################
         # APPLY JSON STYLESHEET
@@ -91,6 +94,10 @@ class MainWindow(QMainWindow):
             lambda: createTable_database_full()
         )
 
+        self.ui.addEmptyCodeBtn.clicked.connect(
+            lambda: createTable_database_basic()
+        )
+
         self.ui.database_table.horizontalHeader().sectionResized.connect(
             self.ui.database_table.resizeColumnsToContents())
 
@@ -106,6 +113,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     window = MainWindow()
+    # window.resize(500, 500)
     window.show()
     t = Thread(target=import_database_from_excel_backup, args=())
     t.start()
