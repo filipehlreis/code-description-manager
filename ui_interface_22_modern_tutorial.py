@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialXizFTG.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialpQwJwS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1040, 628)
+        MainWindow.resize(1305, 617)
         MainWindow.setStyleSheet(u"*{\n"
 "	border: none;\n"
 "	background-color: transparent;\n"
@@ -590,12 +590,42 @@ class Ui_MainWindow(object):
 
         self.frame_13 = QFrame(self.dataPage)
         self.frame_13.setObjectName(u"frame_13")
-        sizePolicy4.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
-        self.frame_13.setSizePolicy(sizePolicy4)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.MinimumExpanding)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
+        self.frame_13.setSizePolicy(sizePolicy5)
         self.frame_13.setFrameShape(QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_15 = QHBoxLayout(self.frame_13)
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
+        self.pushButton_4 = QPushButton(self.frame_13)
+        self.pushButton_4.setObjectName(u"pushButton_4")
+        sizePolicy6 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.MinimumExpanding)
+        sizePolicy6.setHorizontalStretch(0)
+        sizePolicy6.setVerticalStretch(0)
+        sizePolicy6.setHeightForWidth(self.pushButton_4.sizePolicy().hasHeightForWidth())
+        self.pushButton_4.setSizePolicy(sizePolicy6)
+        self.pushButton_4.setMinimumSize(QSize(100, 0))
+
+        self.horizontalLayout_15.addWidget(self.pushButton_4)
+
+        self.pushButton_5 = QPushButton(self.frame_13)
+        self.pushButton_5.setObjectName(u"pushButton_5")
+        sizePolicy6.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
+        self.pushButton_5.setSizePolicy(sizePolicy6)
+        self.pushButton_5.setMinimumSize(QSize(100, 0))
+
+        self.horizontalLayout_15.addWidget(self.pushButton_5)
+
+        self.pushButton_6 = QPushButton(self.frame_13)
+        self.pushButton_6.setObjectName(u"pushButton_6")
+        sizePolicy6.setHeightForWidth(self.pushButton_6.sizePolicy().hasHeightForWidth())
+        self.pushButton_6.setSizePolicy(sizePolicy6)
+        self.pushButton_6.setMinimumSize(QSize(100, 0))
+
+        self.horizontalLayout_15.addWidget(self.pushButton_6)
+
         self.database_search = QLineEdit(self.frame_13)
         self.database_search.setObjectName(u"database_search")
         self.database_search.setMinimumSize(QSize(200, 26))
@@ -605,10 +635,12 @@ class Ui_MainWindow(object):
         self.database_search.setFont(font3)
         self.database_search.setStyleSheet(u"\n"
 "QLineEdit {\n"
-"	border: 1px solid #94B0DA;\n"
+"	border-bottom: 2px solid #30B28C;\n"
 "}")
+        self.database_search.setCursorMoveStyle(Qt.LogicalMoveStyle)
+        self.database_search.setClearButtonEnabled(False)
 
-        self.horizontalLayout_15.addWidget(self.database_search, 0, Qt.AlignRight|Qt.AlignTop)
+        self.horizontalLayout_15.addWidget(self.database_search)
 
         self.pushButton = QPushButton(self.frame_13)
         self.pushButton.setObjectName(u"pushButton")
@@ -617,7 +649,7 @@ class Ui_MainWindow(object):
         self.pushButton.setIcon(icon19)
         self.pushButton.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_15.addWidget(self.pushButton, 0, Qt.AlignRight|Qt.AlignVCenter)
+        self.horizontalLayout_15.addWidget(self.pushButton)
 
 
         self.verticalLayout_17.addWidget(self.frame_13, 0, Qt.AlignRight|Qt.AlignTop)
@@ -748,11 +780,11 @@ class Ui_MainWindow(object):
         __qtablewidgetitem52 = QTableWidgetItem()
         self.database_table.setItem(4, 7, __qtablewidgetitem52)
         self.database_table.setObjectName(u"database_table")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.database_table.sizePolicy().hasHeightForWidth())
-        self.database_table.setSizePolicy(sizePolicy5)
+        sizePolicy7 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Maximum)
+        sizePolicy7.setHorizontalStretch(0)
+        sizePolicy7.setVerticalStretch(0)
+        sizePolicy7.setHeightForWidth(self.database_table.sizePolicy().hasHeightForWidth())
+        self.database_table.setSizePolicy(sizePolicy7)
         self.database_table.setMinimumSize(QSize(0, 220))
         font4 = QFont()
         font4.setFamily(u"Open Sans")
@@ -1171,6 +1203,10 @@ class Ui_MainWindow(object):
         self.createTableDatabaseFullBtn.setText(QCoreApplication.translate("MainWindow", u"Inserir excel inteiro no banco de dados", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Home", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Banco de Dados", None))
+        self.pushButton_4.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.pushButton_5.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.pushButton_6.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.database_search.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Pesquisar", None))
         self.pushButton.setText("")
         ___qtablewidgetitem = self.database_table.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Status", None));

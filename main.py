@@ -98,31 +98,6 @@ class MainWindow(QMainWindow):
 
         self.ui.database_table.doubleClicked.connect(on_click)
 
-    # def create_table_widget(self, rowPosition, columnPosition, text, tableName):
-    #     qtablewidgetitem = QTableWidgetItem()
-
-    #     # USER getattr() METHOD
-    #     getattr(self.ui, tableName).setItem(
-    #         rowPosition, columnPosition, qtablewidgetitem)
-    #     qtablewidgetitem = getattr(self.ui, tableName).item(
-    #         rowPosition, columnPosition)
-
-    #     qtablewidgetitem.setText(text)
-
-    # def createTable_database_basic(self):
-    #     for x in range(10):
-    #         rowPosition = self.ui.database_table.rowCount()
-    #         self.ui.database_table.insertRow(rowPosition)
-
-    #         self.create_table_widget(
-    #             rowPosition, 0, f'Teste {x}', 'database_table')
-    #         self.create_table_widget(
-    #             rowPosition, 1, f'Teste {x}', 'database_table')
-    #         self.create_table_widget(
-    #             rowPosition, 2, f'Teste {x}', 'database_table')
-    #         self.create_table_widget(
-    #             rowPosition, 3, f'Teste {x}', 'database_table')
-
 
 # ########################################################################### #
 # execute app
