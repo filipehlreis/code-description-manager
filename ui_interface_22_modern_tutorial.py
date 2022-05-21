@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialJgMraE.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialwSrutJ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -21,7 +21,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(2092, 1028)
+        MainWindow.resize(1195, 1125)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -62,18 +62,18 @@ class Ui_MainWindow(object):
 "	background-color: #2c313c;\n"
 "}\n"
 "\n"
-"#frame_6, #frame_8, #popupNotificationSubContainer{\n"
+"#frame_6, #frame_8, #popupNotificationSubContainer, #addCodeSubContainer{\n"
 "	background-color: #16191d;\n"
-"border-radius: 10px;\n"
+"	border-radius: 10px;\n"
 "}\n"
 "\n"
 "#headerContainer, #footerContainer{\n"
 "	background-color: #2c313c;\n"
-"}\n"
+""
+                        "}\n"
 "\n"
-"#addCodeC"
-                        "ontainer QLabel {\n"
-"	font: normal 12pt \"Open Sans\";\n"
+"#addCodeSubContainer #headerContainer_3 QLabel {\n"
+"	font: bold 12pt \"Open Sans\";\n"
 "}\n"
 "\n"
 "\n"
@@ -84,12 +84,15 @@ class Ui_MainWindow(object):
 "	font: normal 10pt \"Open Sans\";\n"
 "}\n"
 "\n"
-"#addCodeSubContainer QLabel{\n"
+"\n"
+"\n"
+"#addCodeSubContainer QLabel,  #popupNotificationSubContainer QLabel{\n"
 "	font: normal 10pt \"Open Sans\";\n"
 "}\n"
 "\n"
 "\n"
-"#closeBtn, #minimizeBtn, #restoreBtn{\n"
+"\n"
+"#closeBtn, #minimizeBtn, #restoreBtn, #saveCadastroItemBtn, #closeCadastroItemBtn{\n"
 "	text-align: center;\n"
 "	padding: 4px 4px 4px 4px;\n"
 "	border-top-left-radius: 5px;\n"
@@ -102,8 +105,13 @@ class Ui_MainWindow(object):
 "	background-color: #1f232a;\n"
 "}\n"
 "\n"
-"#closeBtn:hover {\n"
+"#closeBtn:hover, #closeCadastroItemBtn:hover {\n"
 "	background-color: #8B2635;\n"
+"}\n"
+"\n"
+"\n"
+"#saveCadastroItemBtn:hover {\n"
+"	background-color: #114031;\n"
 "}\n"
 "\n"
 "")
@@ -538,207 +546,183 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_10.addWidget(self.headerContainer)
 
-        self.addCodeContainer = QFrame(self.mainBodyContainer)
+        self.addCodeContainer = QCustomSlideMenu(self.mainBodyContainer)
         self.addCodeContainer.setObjectName(u"addCodeContainer")
-        self.addCodeContainer.setMinimumSize(QSize(0, 300))
-        self.addCodeContainer.setFrameShape(QFrame.StyledPanel)
-        self.addCodeContainer.setFrameShadow(QFrame.Raised)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.MinimumExpanding)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.addCodeContainer.sizePolicy().hasHeightForWidth())
+        self.addCodeContainer.setSizePolicy(sizePolicy3)
+        self.addCodeContainer.setMinimumSize(QSize(0, 0))
+        self.addCodeContainer.setMaximumSize(QSize(16777215, 10))
         self.verticalLayout_28 = QVBoxLayout(self.addCodeContainer)
         self.verticalLayout_28.setObjectName(u"verticalLayout_28")
-        self.headerContainer_3 = QFrame(self.addCodeContainer)
+        self.addCodeSubContainer = QWidget(self.addCodeContainer)
+        self.addCodeSubContainer.setObjectName(u"addCodeSubContainer")
+        sizePolicy3.setHeightForWidth(self.addCodeSubContainer.sizePolicy().hasHeightForWidth())
+        self.addCodeSubContainer.setSizePolicy(sizePolicy3)
+        self.addCodeSubContainer.setMinimumSize(QSize(0, 0))
+        self.addCodeSubContainer.setStyleSheet(u"*{\n"
+"margin: 5px;\n"
+"}")
+        self.verticalLayout_29 = QVBoxLayout(self.addCodeSubContainer)
+        self.verticalLayout_29.setObjectName(u"verticalLayout_29")
+        self.headerContainer_3 = QFrame(self.addCodeSubContainer)
         self.headerContainer_3.setObjectName(u"headerContainer_3")
         self.headerContainer_3.setFrameShape(QFrame.StyledPanel)
         self.headerContainer_3.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_23 = QHBoxLayout(self.headerContainer_3)
         self.horizontalLayout_23.setObjectName(u"horizontalLayout_23")
+        self.saveCadastroItemBtn = QPushButton(self.headerContainer_3)
+        self.saveCadastroItemBtn.setObjectName(u"saveCadastroItemBtn")
+        self.saveCadastroItemBtn.setStyleSheet(u"")
+        icon19 = QIcon()
+        icon19.addFile(u":/icons/icons/feather-WHITE/save.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.saveCadastroItemBtn.setIcon(icon19)
+        self.saveCadastroItemBtn.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_23.addWidget(self.saveCadastroItemBtn, 0, Qt.AlignLeft)
+
         self.label_23 = QLabel(self.headerContainer_3)
         self.label_23.setObjectName(u"label_23")
 
         self.horizontalLayout_23.addWidget(self.label_23, 0, Qt.AlignHCenter)
 
+        self.closeCadastroItemBtn = QPushButton(self.headerContainer_3)
+        self.closeCadastroItemBtn.setObjectName(u"closeCadastroItemBtn")
+        icon20 = QIcon()
+        icon20.addFile(u":/icons/icons/feather-WHITE/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.closeCadastroItemBtn.setIcon(icon20)
+        self.closeCadastroItemBtn.setIconSize(QSize(24, 24))
 
-        self.verticalLayout_28.addWidget(self.headerContainer_3)
+        self.horizontalLayout_23.addWidget(self.closeCadastroItemBtn, 0, Qt.AlignRight)
 
-        self.addCodeSubContainer = QFrame(self.addCodeContainer)
-        self.addCodeSubContainer.setObjectName(u"addCodeSubContainer")
-        self.addCodeSubContainer.setMinimumSize(QSize(0, 0))
-        self.addCodeSubContainer.setFrameShape(QFrame.StyledPanel)
-        self.addCodeSubContainer.setFrameShadow(QFrame.Raised)
-        self.formLayout = QFormLayout(self.addCodeSubContainer)
+
+        self.verticalLayout_29.addWidget(self.headerContainer_3, 0, Qt.AlignTop)
+
+        self.addCodeForm = QFrame(self.addCodeSubContainer)
+        self.addCodeForm.setObjectName(u"addCodeForm")
+        self.addCodeForm.setMinimumSize(QSize(0, 0))
+        self.addCodeForm.setFrameShape(QFrame.StyledPanel)
+        self.addCodeForm.setFrameShadow(QFrame.Raised)
+        self.formLayout = QFormLayout(self.addCodeForm)
         self.formLayout.setObjectName(u"formLayout")
-        self.frame_20 = QFrame(self.addCodeSubContainer)
-        self.frame_20.setObjectName(u"frame_20")
-        self.frame_20.setFrameShape(QFrame.StyledPanel)
-        self.frame_20.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_24 = QHBoxLayout(self.frame_20)
-        self.horizontalLayout_24.setObjectName(u"horizontalLayout_24")
-        self.label_35 = QLabel(self.frame_20)
+        self.label_35 = QLabel(self.addCodeForm)
         self.label_35.setObjectName(u"label_35")
 
-        self.horizontalLayout_24.addWidget(self.label_35, 0, Qt.AlignLeft)
+        self.formLayout.setWidget(1, QFormLayout.LabelRole, self.label_35)
 
-        self.lineEdit_12 = QLineEdit(self.frame_20)
+        self.lineEdit_12 = QLineEdit(self.addCodeForm)
         self.lineEdit_12.setObjectName(u"lineEdit_12")
-        self.lineEdit_12.setMinimumSize(QSize(300, 22))
-        self.lineEdit_12.setMaximumSize(QSize(300, 16777215))
+        self.lineEdit_12.setMinimumSize(QSize(0, 32))
+        self.lineEdit_12.setMaximumSize(QSize(16777215, 16777215))
 
-        self.horizontalLayout_24.addWidget(self.lineEdit_12)
+        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.lineEdit_12)
 
-
-        self.formLayout.setWidget(0, QFormLayout.FieldRole, self.frame_20)
-
-        self.frame_16 = QFrame(self.addCodeSubContainer)
-        self.frame_16.setObjectName(u"frame_16")
-        self.frame_16.setFrameShape(QFrame.StyledPanel)
-        self.frame_16.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_18 = QHBoxLayout(self.frame_16)
-        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
-        self.label_30 = QLabel(self.frame_16)
+        self.label_30 = QLabel(self.addCodeForm)
         self.label_30.setObjectName(u"label_30")
 
-        self.horizontalLayout_18.addWidget(self.label_30, 0, Qt.AlignLeft)
+        self.formLayout.setWidget(2, QFormLayout.LabelRole, self.label_30)
 
-        self.lineEdit_7 = QLineEdit(self.frame_16)
+        self.lineEdit_7 = QLineEdit(self.addCodeForm)
         self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setMinimumSize(QSize(300, 22))
+        self.lineEdit_7.setMinimumSize(QSize(0, 32))
+        self.lineEdit_7.setInputMethodHints(Qt.ImhDigitsOnly)
 
-        self.horizontalLayout_18.addWidget(self.lineEdit_7, 0, Qt.AlignLeft)
+        self.formLayout.setWidget(2, QFormLayout.FieldRole, self.lineEdit_7)
 
-
-        self.formLayout.setWidget(1, QFormLayout.FieldRole, self.frame_16)
-
-        self.frame_17 = QFrame(self.addCodeSubContainer)
-        self.frame_17.setObjectName(u"frame_17")
-        self.frame_17.setFrameShape(QFrame.StyledPanel)
-        self.frame_17.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_19 = QHBoxLayout(self.frame_17)
-        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
-        self.label_31 = QLabel(self.frame_17)
+        self.label_31 = QLabel(self.addCodeForm)
         self.label_31.setObjectName(u"label_31")
 
-        self.horizontalLayout_19.addWidget(self.label_31, 0, Qt.AlignLeft)
+        self.formLayout.setWidget(3, QFormLayout.LabelRole, self.label_31)
 
-        self.lineEdit_8 = QLineEdit(self.frame_17)
+        self.lineEdit_8 = QLineEdit(self.addCodeForm)
         self.lineEdit_8.setObjectName(u"lineEdit_8")
+        self.lineEdit_8.setMinimumSize(QSize(0, 32))
+        self.lineEdit_8.setInputMethodHints(Qt.ImhPreferUppercase)
 
-        self.horizontalLayout_19.addWidget(self.lineEdit_8, 0, Qt.AlignLeft)
+        self.formLayout.setWidget(3, QFormLayout.FieldRole, self.lineEdit_8)
 
-
-        self.formLayout.setWidget(2, QFormLayout.FieldRole, self.frame_17)
-
-        self.frame_15 = QFrame(self.addCodeSubContainer)
-        self.frame_15.setObjectName(u"frame_15")
-        self.frame_15.setFrameShape(QFrame.StyledPanel)
-        self.frame_15.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_17 = QHBoxLayout(self.frame_15)
-        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
-        self.label_29 = QLabel(self.frame_15)
-        self.label_29.setObjectName(u"label_29")
-
-        self.horizontalLayout_17.addWidget(self.label_29, 0, Qt.AlignLeft)
-
-        self.lineEdit_6 = QLineEdit(self.frame_15)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
-
-        self.horizontalLayout_17.addWidget(self.lineEdit_6, 0, Qt.AlignLeft|Qt.AlignVCenter)
-
-
-        self.formLayout.setWidget(6, QFormLayout.FieldRole, self.frame_15)
-
-        self.frame_19 = QFrame(self.addCodeSubContainer)
-        self.frame_19.setObjectName(u"frame_19")
-        self.frame_19.setFrameShape(QFrame.StyledPanel)
-        self.frame_19.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_21 = QHBoxLayout(self.frame_19)
-        self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
-        self.label_33 = QLabel(self.frame_19)
-        self.label_33.setObjectName(u"label_33")
-
-        self.horizontalLayout_21.addWidget(self.label_33, 0, Qt.AlignLeft)
-
-        self.lineEdit_10 = QLineEdit(self.frame_19)
-        self.lineEdit_10.setObjectName(u"lineEdit_10")
-
-        self.horizontalLayout_21.addWidget(self.lineEdit_10, 0, Qt.AlignLeft)
-
-
-        self.formLayout.setWidget(8, QFormLayout.FieldRole, self.frame_19)
-
-        self.frame_21 = QFrame(self.addCodeSubContainer)
-        self.frame_21.setObjectName(u"frame_21")
-        self.frame_21.setFrameShape(QFrame.StyledPanel)
-        self.frame_21.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_25 = QHBoxLayout(self.frame_21)
-        self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
-        self.label_36 = QLabel(self.frame_21)
-        self.label_36.setObjectName(u"label_36")
-
-        self.horizontalLayout_25.addWidget(self.label_36, 0, Qt.AlignLeft)
-
-        self.lineEdit_13 = QLineEdit(self.frame_21)
-        self.lineEdit_13.setObjectName(u"lineEdit_13")
-        self.lineEdit_13.setMaximumSize(QSize(300, 16777215))
-
-        self.horizontalLayout_25.addWidget(self.lineEdit_13)
-
-
-        self.formLayout.setWidget(4, QFormLayout.FieldRole, self.frame_21)
-
-        self.frame_18 = QFrame(self.addCodeSubContainer)
-        self.frame_18.setObjectName(u"frame_18")
-        self.frame_18.setFrameShape(QFrame.StyledPanel)
-        self.frame_18.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_20 = QHBoxLayout(self.frame_18)
-        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
-        self.label_32 = QLabel(self.frame_18)
+        self.label_32 = QLabel(self.addCodeForm)
         self.label_32.setObjectName(u"label_32")
 
-        self.horizontalLayout_20.addWidget(self.label_32, 0, Qt.AlignLeft)
+        self.formLayout.setWidget(4, QFormLayout.LabelRole, self.label_32)
 
-        self.lineEdit_9 = QLineEdit(self.frame_18)
+        self.lineEdit_9 = QLineEdit(self.addCodeForm)
         self.lineEdit_9.setObjectName(u"lineEdit_9")
-        self.lineEdit_9.setMaximumSize(QSize(300, 16777215))
+        self.lineEdit_9.setMinimumSize(QSize(0, 32))
+        self.lineEdit_9.setMaximumSize(QSize(16777215, 16777215))
+        self.lineEdit_9.setInputMethodHints(Qt.ImhPreferUppercase)
 
-        self.horizontalLayout_20.addWidget(self.lineEdit_9)
+        self.formLayout.setWidget(4, QFormLayout.FieldRole, self.lineEdit_9)
 
+        self.label_36 = QLabel(self.addCodeForm)
+        self.label_36.setObjectName(u"label_36")
 
-        self.formLayout.setWidget(3, QFormLayout.FieldRole, self.frame_18)
+        self.formLayout.setWidget(5, QFormLayout.LabelRole, self.label_36)
 
-        self.frame_14 = QFrame(self.addCodeSubContainer)
-        self.frame_14.setObjectName(u"frame_14")
-        self.frame_14.setMaximumSize(QSize(16777215, 1666666))
-        self.frame_14.setFrameShape(QFrame.StyledPanel)
-        self.frame_14.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_16 = QHBoxLayout(self.frame_14)
-        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
-        self.label_22 = QLabel(self.frame_14)
+        self.lineEdit_13 = QLineEdit(self.addCodeForm)
+        self.lineEdit_13.setObjectName(u"lineEdit_13")
+        self.lineEdit_13.setMinimumSize(QSize(0, 32))
+        self.lineEdit_13.setMaximumSize(QSize(16777215, 16777215))
+        self.lineEdit_13.setInputMethodHints(Qt.ImhDigitsOnly)
+
+        self.formLayout.setWidget(5, QFormLayout.FieldRole, self.lineEdit_13)
+
+        self.label_22 = QLabel(self.addCodeForm)
         self.label_22.setObjectName(u"label_22")
         sizePolicy.setHeightForWidth(self.label_22.sizePolicy().hasHeightForWidth())
         self.label_22.setSizePolicy(sizePolicy)
 
-        self.horizontalLayout_16.addWidget(self.label_22, 0, Qt.AlignLeft)
+        self.formLayout.setWidget(6, QFormLayout.LabelRole, self.label_22)
 
-        self.lineEdit = QLineEdit(self.frame_14)
+        self.lineEdit = QLineEdit(self.addCodeForm)
         self.lineEdit.setObjectName(u"lineEdit")
+        self.lineEdit.setMinimumSize(QSize(0, 32))
+        self.lineEdit.setInputMethodHints(Qt.ImhDigitsOnly)
 
-        self.horizontalLayout_16.addWidget(self.lineEdit, 0, Qt.AlignLeft)
+        self.formLayout.setWidget(6, QFormLayout.FieldRole, self.lineEdit)
+
+        self.label_29 = QLabel(self.addCodeForm)
+        self.label_29.setObjectName(u"label_29")
+
+        self.formLayout.setWidget(7, QFormLayout.LabelRole, self.label_29)
+
+        self.lineEdit_6 = QLineEdit(self.addCodeForm)
+        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.lineEdit_6.setMinimumSize(QSize(0, 32))
+        self.lineEdit_6.setInputMethodHints(Qt.ImhDigitsOnly)
+
+        self.formLayout.setWidget(7, QFormLayout.FieldRole, self.lineEdit_6)
+
+        self.label_33 = QLabel(self.addCodeForm)
+        self.label_33.setObjectName(u"label_33")
+
+        self.formLayout.setWidget(8, QFormLayout.LabelRole, self.label_33)
+
+        self.lineEdit_10 = QLineEdit(self.addCodeForm)
+        self.lineEdit_10.setObjectName(u"lineEdit_10")
+        self.lineEdit_10.setMinimumSize(QSize(0, 32))
+        self.lineEdit_10.setInputMethodHints(Qt.ImhDigitsOnly)
+
+        self.formLayout.setWidget(8, QFormLayout.FieldRole, self.lineEdit_10)
 
 
-        self.formLayout.setWidget(5, QFormLayout.FieldRole, self.frame_14)
+        self.verticalLayout_29.addWidget(self.addCodeForm, 0, Qt.AlignHCenter|Qt.AlignTop)
 
 
-        self.verticalLayout_28.addWidget(self.addCodeSubContainer, 0, Qt.AlignHCenter)
+        self.verticalLayout_28.addWidget(self.addCodeSubContainer, 0, Qt.AlignHCenter|Qt.AlignVCenter)
 
 
         self.verticalLayout_10.addWidget(self.addCodeContainer)
 
         self.mainBodyContent = QWidget(self.mainBodyContainer)
         self.mainBodyContent.setObjectName(u"mainBodyContent")
-        sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
-        sizePolicy3.setHorizontalStretch(0)
-        sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.mainBodyContent.sizePolicy().hasHeightForWidth())
-        self.mainBodyContent.setSizePolicy(sizePolicy3)
+        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Expanding)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.mainBodyContent.sizePolicy().hasHeightForWidth())
+        self.mainBodyContent.setSizePolicy(sizePolicy4)
         self.mainBodyContent.setMinimumSize(QSize(500, 420))
         self.horizontalLayout_8 = QHBoxLayout(self.mainBodyContent)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
@@ -786,11 +770,11 @@ class Ui_MainWindow(object):
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
         self.label_11 = QLabel(self.dataPage)
         self.label_11.setObjectName(u"label_11")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.label_11.sizePolicy().hasHeightForWidth())
-        self.label_11.setSizePolicy(sizePolicy4)
+        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Minimum)
+        sizePolicy5.setHorizontalStretch(0)
+        sizePolicy5.setVerticalStretch(0)
+        sizePolicy5.setHeightForWidth(self.label_11.sizePolicy().hasHeightForWidth())
+        self.label_11.setSizePolicy(sizePolicy5)
         self.label_11.setFont(font1)
         self.label_11.setAlignment(Qt.AlignCenter)
 
@@ -798,11 +782,8 @@ class Ui_MainWindow(object):
 
         self.frame_13 = QFrame(self.dataPage)
         self.frame_13.setObjectName(u"frame_13")
-        sizePolicy5 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.MinimumExpanding)
-        sizePolicy5.setHorizontalStretch(0)
-        sizePolicy5.setVerticalStretch(0)
-        sizePolicy5.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
-        self.frame_13.setSizePolicy(sizePolicy5)
+        sizePolicy3.setHeightForWidth(self.frame_13.sizePolicy().hasHeightForWidth())
+        self.frame_13.setSizePolicy(sizePolicy3)
         self.frame_13.setFrameShape(QFrame.StyledPanel)
         self.frame_13.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_15 = QHBoxLayout(self.frame_13)
@@ -853,9 +834,9 @@ class Ui_MainWindow(object):
 
         self.pushButton = QPushButton(self.frame_13)
         self.pushButton.setObjectName(u"pushButton")
-        icon19 = QIcon()
-        icon19.addFile(u":/icons/icons/feather-WHITE/search.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon19)
+        icon21 = QIcon()
+        icon21.addFile(u":/icons/icons/feather-WHITE/search.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton.setIcon(icon21)
         self.pushButton.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_15.addWidget(self.pushButton)
@@ -865,8 +846,8 @@ class Ui_MainWindow(object):
 
         self.frame_12 = QFrame(self.dataPage)
         self.frame_12.setObjectName(u"frame_12")
-        sizePolicy4.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
-        self.frame_12.setSizePolicy(sizePolicy4)
+        sizePolicy5.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
+        self.frame_12.setSizePolicy(sizePolicy5)
         self.frame_12.setMinimumSize(QSize(0, 0))
         self.frame_12.setFrameShape(QFrame.StyledPanel)
         self.frame_12.setFrameShadow(QFrame.Raised)
@@ -1212,16 +1193,21 @@ class Ui_MainWindow(object):
         self.popupNotificationSubContainer.setObjectName(u"popupNotificationSubContainer")
         self.verticalLayout_20 = QVBoxLayout(self.popupNotificationSubContainer)
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.label_14 = QLabel(self.popupNotificationSubContainer)
-        self.label_14.setObjectName(u"label_14")
+        self.notificationTitleLabel = QLabel(self.popupNotificationSubContainer)
+        self.notificationTitleLabel.setObjectName(u"notificationTitleLabel")
         font5 = QFont()
-        font5.setFamily(u"Noto Sans")
-        font5.setPointSize(10)
+        font5.setFamily(u"Open Sans")
+        font5.setPointSize(12)
         font5.setBold(True)
+        font5.setItalic(False)
         font5.setWeight(75)
-        self.label_14.setFont(font5)
+        self.notificationTitleLabel.setFont(font5)
+        self.notificationTitleLabel.setStyleSheet(u"\n"
+"*{\n"
+"	font: bold 12pt \"Open Sans\";\n"
+"}")
 
-        self.verticalLayout_20.addWidget(self.label_14)
+        self.verticalLayout_20.addWidget(self.notificationTitleLabel)
 
         self.frame_9 = QFrame(self.popupNotificationSubContainer)
         self.frame_9.setObjectName(u"frame_9")
@@ -1233,14 +1219,14 @@ class Ui_MainWindow(object):
         self.notificationLabel.setObjectName(u"notificationLabel")
         sizePolicy2.setHeightForWidth(self.notificationLabel.sizePolicy().hasHeightForWidth())
         self.notificationLabel.setSizePolicy(sizePolicy2)
+        self.notificationLabel.setLineWidth(2)
         self.notificationLabel.setAlignment(Qt.AlignCenter)
+        self.notificationLabel.setWordWrap(True)
 
         self.horizontalLayout_10.addWidget(self.notificationLabel)
 
         self.closeNotificationBtn = QPushButton(self.frame_9)
         self.closeNotificationBtn.setObjectName(u"closeNotificationBtn")
-        icon20 = QIcon()
-        icon20.addFile(u":/icons/icons/feather-WHITE/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.closeNotificationBtn.setIcon(icon20)
         self.closeNotificationBtn.setIconSize(QSize(24, 24))
 
@@ -1318,7 +1304,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.centerMenuPages.setCurrentIndex(2)
-        self.mainPages.setCurrentIndex(1)
+        self.mainPages.setCurrentIndex(5)
         self.rightMenuPages.setCurrentIndex(0)
 
 
@@ -1406,7 +1392,15 @@ class Ui_MainWindow(object):
         self.closeBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Window", None))
 #endif // QT_CONFIG(tooltip)
         self.closeBtn.setText("")
+#if QT_CONFIG(tooltip)
+        self.saveCadastroItemBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Salvar Cadastro", None))
+#endif // QT_CONFIG(tooltip)
+        self.saveCadastroItemBtn.setText("")
         self.label_23.setText(QCoreApplication.translate("MainWindow", u"Adicionar Cadastro de Item no Banco de Dados", None))
+#if QT_CONFIG(tooltip)
+        self.closeCadastroItemBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Cancelar Cadastro", None))
+#endif // QT_CONFIG(tooltip)
+        self.closeCadastroItemBtn.setText("")
         self.label_35.setText(QCoreApplication.translate("MainWindow", u"STATUS", None))
 #if QT_CONFIG(tooltip)
         self.lineEdit_12.setToolTip("")
@@ -1416,16 +1410,16 @@ class Ui_MainWindow(object):
         self.lineEdit_7.setPlaceholderText(QCoreApplication.translate("MainWindow", u"C\u00d3DIGO", None))
         self.label_31.setText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O SIMPLIFICADA", None))
         self.lineEdit_8.setPlaceholderText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O SIMPLIFICADA", None))
+        self.label_32.setText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O COMPLETA", None))
+        self.lineEdit_9.setPlaceholderText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O COMPLETA", None))
+        self.label_36.setText(QCoreApplication.translate("MainWindow", u"QUANTIDADE", None))
+        self.lineEdit_13.setPlaceholderText(QCoreApplication.translate("MainWindow", u"QUANTIDADE", None))
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"CAIXA", None))
+        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CAIXA", None))
         self.label_29.setText(QCoreApplication.translate("MainWindow", u"PRATELEIRA", None))
         self.lineEdit_6.setPlaceholderText(QCoreApplication.translate("MainWindow", u"PRATELEIRA", None))
         self.label_33.setText(QCoreApplication.translate("MainWindow", u"CORREDOR", None))
         self.lineEdit_10.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CORREDOR", None))
-        self.label_36.setText(QCoreApplication.translate("MainWindow", u"QUANTIDADE", None))
-        self.lineEdit_13.setPlaceholderText(QCoreApplication.translate("MainWindow", u"QUANTIDADE", None))
-        self.label_32.setText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O COMPLETA", None))
-        self.lineEdit_9.setPlaceholderText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O COMPLETA", None))
-        self.label_22.setText(QCoreApplication.translate("MainWindow", u"CAIXA", None))
-        self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CAIXA", None))
         self.importCsvOmieBtn.setText(QCoreApplication.translate("MainWindow", u"Importar arquivo EXCEL do OMIE", None))
         self.exportCsvOmieToHdBtn.setText(QCoreApplication.translate("MainWindow", u"Gravar CSV tratado no HD", None))
         self.createTable_databaseBtn.setText(QCoreApplication.translate("MainWindow", u"Inserir tabela basica no banco de dados", None))
@@ -1559,7 +1553,7 @@ class Ui_MainWindow(object):
         self.closeRightMenuBtn.setText("")
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Profile", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"More ...", None))
-        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Notifica\u00e7\u00e3o", None))
+        self.notificationTitleLabel.setText(QCoreApplication.translate("MainWindow", u"Notifica\u00e7\u00e3o", None))
         self.notificationLabel.setText(QCoreApplication.translate("MainWindow", u"Notification Message", None))
 #if QT_CONFIG(tooltip)
         self.closeNotificationBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Notification", None))

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2092</width>
-    <height>1028</height>
+    <width>1195</width>
+    <height>1125</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -55,17 +55,17 @@
 	background-color: #2c313c;
 }
 
-#frame_6, #frame_8, #popupNotificationSubContainer{
+#frame_6, #frame_8, #popupNotificationSubContainer, #addCodeSubContainer{
 	background-color: #16191d;
-border-radius: 10px;
+	border-radius: 10px;
 }
 
 #headerContainer, #footerContainer{
 	background-color: #2c313c;
 }
 
-#addCodeContainer QLabel {
-	font: normal 12pt &quot;Open Sans&quot;;
+#addCodeSubContainer #headerContainer_3 QLabel {
+	font: bold 12pt &quot;Open Sans&quot;;
 }
 
 
@@ -76,12 +76,15 @@ border-radius: 10px;
 	font: normal 10pt &quot;Open Sans&quot;;
 }
 
-#addCodeSubContainer QLabel{
+
+
+#addCodeSubContainer QLabel,  #popupNotificationSubContainer QLabel{
 	font: normal 10pt &quot;Open Sans&quot;;
 }
 
 
-#closeBtn, #minimizeBtn, #restoreBtn{
+
+#closeBtn, #minimizeBtn, #restoreBtn, #saveCadastroItemBtn, #closeCadastroItemBtn{
 	text-align: center;
 	padding: 4px 4px 4px 4px;
 	border-top-left-radius: 5px;
@@ -94,8 +97,13 @@ border-radius: 10px;
 	background-color: #1f232a;
 }
 
-#closeBtn:hover {
+#closeBtn:hover, #closeCadastroItemBtn:hover {
 	background-color: #8B2635;
+}
+
+
+#saveCadastroItemBtn:hover {
+	background-color: #114031;
 }
 
 </string>
@@ -1011,81 +1019,141 @@ border-radius: 10px;
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="addCodeContainer">
+        <widget class="QCustomSlideMenu" name="addCodeContainer" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>300</height>
+           <height>0</height>
           </size>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>10</height>
+          </size>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_28">
-          <item>
-           <widget class="QFrame" name="headerContainer_3">
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+          <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+           <widget class="QWidget" name="addCodeSubContainer" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_23">
-             <item alignment="Qt::AlignHCenter">
-              <widget class="QLabel" name="label_23">
-               <property name="text">
-                <string>Adicionar Cadastro de Item no Banco de Dados</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item alignment="Qt::AlignHCenter">
-           <widget class="QFrame" name="addCodeSubContainer">
             <property name="minimumSize">
              <size>
               <width>0</width>
               <height>0</height>
              </size>
             </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
+            <property name="styleSheet">
+             <string notr="true">*{
+margin: 5px;
+}</string>
             </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QFormLayout" name="formLayout">
-             <item row="0" column="1">
-              <widget class="QFrame" name="frame_20">
+            <layout class="QVBoxLayout" name="verticalLayout_29">
+             <item alignment="Qt::AlignTop">
+              <widget class="QFrame" name="headerContainer_3">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_24">
+               <layout class="QHBoxLayout" name="horizontalLayout_23">
                 <item alignment="Qt::AlignLeft">
+                 <widget class="QPushButton" name="saveCadastroItemBtn">
+                  <property name="toolTip">
+                   <string>Salvar Cadastro</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/icons/icons/feather-WHITE/save.svg</normaloff>:/icons/icons/feather-WHITE/save.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>24</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item alignment="Qt::AlignHCenter">
+                 <widget class="QLabel" name="label_23">
+                  <property name="text">
+                   <string>Adicionar Cadastro de Item no Banco de Dados</string>
+                  </property>
+                 </widget>
+                </item>
+                <item alignment="Qt::AlignRight">
+                 <widget class="QPushButton" name="closeCadastroItemBtn">
+                  <property name="toolTip">
+                   <string>Cancelar Cadastro</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset resource="resources.qrc">
+                    <normaloff>:/icons/icons/feather-WHITE/x-octagon.svg</normaloff>:/icons/icons/feather-WHITE/x-octagon.svg</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>24</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+              <widget class="QFrame" name="addCodeForm">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QFormLayout" name="formLayout">
+                <item row="1" column="0">
                  <widget class="QLabel" name="label_35">
                   <property name="text">
                    <string>STATUS</string>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item row="1" column="1">
                  <widget class="QLineEdit" name="lineEdit_12">
                   <property name="minimumSize">
                    <size>
-                    <width>300</width>
-                    <height>22</height>
+                    <width>0</width>
+                    <height>32</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>300</width>
+                    <width>16777215</width>
                     <height>16777215</height>
                    </size>
                   </property>
@@ -1097,199 +1165,111 @@ border-radius: 10px;
                   </property>
                  </widget>
                 </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QFrame" name="frame_16">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_18">
-                <item alignment="Qt::AlignLeft">
+                <item row="2" column="0">
                  <widget class="QLabel" name="label_30">
                   <property name="text">
                    <string>CÓDIGO</string>
                   </property>
                  </widget>
                 </item>
-                <item alignment="Qt::AlignLeft">
+                <item row="2" column="1">
                  <widget class="QLineEdit" name="lineEdit_7">
                   <property name="minimumSize">
                    <size>
-                    <width>300</width>
-                    <height>22</height>
+                    <width>0</width>
+                    <height>32</height>
                    </size>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhDigitsOnly</set>
                   </property>
                   <property name="placeholderText">
                    <string>CÓDIGO</string>
                   </property>
                  </widget>
                 </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QFrame" name="frame_17">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_19">
-                <item alignment="Qt::AlignLeft">
+                <item row="3" column="0">
                  <widget class="QLabel" name="label_31">
                   <property name="text">
                    <string>DESCRIÇÃO SIMPLIFICADA</string>
                   </property>
                  </widget>
                 </item>
-                <item alignment="Qt::AlignLeft">
+                <item row="3" column="1">
                  <widget class="QLineEdit" name="lineEdit_8">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhPreferUppercase</set>
+                  </property>
                   <property name="placeholderText">
                    <string>DESCRIÇÃO SIMPLIFICADA</string>
                   </property>
                  </widget>
                 </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="6" column="1">
-              <widget class="QFrame" name="frame_15">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_17">
-                <item alignment="Qt::AlignLeft">
-                 <widget class="QLabel" name="label_29">
-                  <property name="text">
-                   <string>PRATELEIRA</string>
-                  </property>
-                 </widget>
-                </item>
-                <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
-                 <widget class="QLineEdit" name="lineEdit_6">
-                  <property name="placeholderText">
-                   <string>PRATELEIRA</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="8" column="1">
-              <widget class="QFrame" name="frame_19">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_21">
-                <item alignment="Qt::AlignLeft">
-                 <widget class="QLabel" name="label_33">
-                  <property name="text">
-                   <string>CORREDOR</string>
-                  </property>
-                 </widget>
-                </item>
-                <item alignment="Qt::AlignLeft">
-                 <widget class="QLineEdit" name="lineEdit_10">
-                  <property name="placeholderText">
-                   <string>CORREDOR</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QFrame" name="frame_21">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_25">
-                <item alignment="Qt::AlignLeft">
-                 <widget class="QLabel" name="label_36">
-                  <property name="text">
-                   <string>QUANTIDADE</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="lineEdit_13">
-                  <property name="maximumSize">
-                   <size>
-                    <width>300</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="placeholderText">
-                   <string>QUANTIDADE</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="3" column="1">
-              <widget class="QFrame" name="frame_18">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_20">
-                <item alignment="Qt::AlignLeft">
+                <item row="4" column="0">
                  <widget class="QLabel" name="label_32">
                   <property name="text">
                    <string>DESCRIÇÃO COMPLETA</string>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item row="4" column="1">
                  <widget class="QLineEdit" name="lineEdit_9">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>32</height>
+                   </size>
+                  </property>
                   <property name="maximumSize">
                    <size>
-                    <width>300</width>
+                    <width>16777215</width>
                     <height>16777215</height>
                    </size>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhPreferUppercase</set>
                   </property>
                   <property name="placeholderText">
                    <string>DESCRIÇÃO COMPLETA</string>
                   </property>
                  </widget>
                 </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="5" column="1">
-              <widget class="QFrame" name="frame_14">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>1666666</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_16">
-                <item alignment="Qt::AlignLeft">
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_36">
+                  <property name="text">
+                   <string>QUANTIDADE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QLineEdit" name="lineEdit_13">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhDigitsOnly</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>QUANTIDADE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="0">
                  <widget class="QLabel" name="label_22">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -1302,10 +1282,65 @@ border-radius: 10px;
                   </property>
                  </widget>
                 </item>
-                <item alignment="Qt::AlignLeft">
+                <item row="6" column="1">
                  <widget class="QLineEdit" name="lineEdit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhDigitsOnly</set>
+                  </property>
                   <property name="placeholderText">
                    <string>CAIXA</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="0">
+                 <widget class="QLabel" name="label_29">
+                  <property name="text">
+                   <string>PRATELEIRA</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QLineEdit" name="lineEdit_6">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhDigitsOnly</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>PRATELEIRA</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="0">
+                 <widget class="QLabel" name="label_33">
+                  <property name="text">
+                   <string>CORREDOR</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="8" column="1">
+                 <widget class="QLineEdit" name="lineEdit_10">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>32</height>
+                   </size>
+                  </property>
+                  <property name="inputMethodHints">
+                   <set>Qt::ImhDigitsOnly</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>CORREDOR</string>
                   </property>
                  </widget>
                 </item>
@@ -1339,7 +1374,7 @@ border-radius: 10px;
              <item>
               <widget class="QCustomStackedWidget" name="mainPages">
                <property name="currentIndex">
-                <number>1</number>
+                <number>5</number>
                </property>
                <widget class="QWidget" name="homePage">
                 <layout class="QVBoxLayout" name="verticalLayout_16">
@@ -2231,14 +2266,21 @@ QTableWidget::item:selected{
            <widget class="QWidget" name="popupNotificationSubContainer" native="true">
             <layout class="QVBoxLayout" name="verticalLayout_20">
              <item>
-              <widget class="QLabel" name="label_14">
+              <widget class="QLabel" name="notificationTitleLabel">
                <property name="font">
                 <font>
-                 <family>Noto Sans</family>
-                 <pointsize>10</pointsize>
+                 <family>Open Sans</family>
+                 <pointsize>12</pointsize>
                  <weight>75</weight>
+                 <italic>false</italic>
                  <bold>true</bold>
                 </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">
+*{
+	font: bold 12pt &quot;Open Sans&quot;;
+}</string>
                </property>
                <property name="text">
                 <string>Notificação</string>
@@ -2262,11 +2304,17 @@ QTableWidget::item:selected{
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="lineWidth">
+                   <number>2</number>
+                  </property>
                   <property name="text">
                    <string>Notification Message</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>

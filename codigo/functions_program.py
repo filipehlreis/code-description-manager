@@ -652,7 +652,7 @@ def export_excel_sheet_omie():
         database_pandas.to_excel(dir_to_save, index=False)
         print('Arquivo exportado com sucesso.\n')
     else:
-        message = 'Banco de Dados vazio! Necessário importar ou '\
+        message = 'Banco de Dados vazio!\nNecessário importar ou '\
             'adicionar novos itens primeiro.'
         setTextToNotificationPopUp(message)
         print('\n' + message)

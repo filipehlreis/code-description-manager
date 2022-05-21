@@ -36,7 +36,7 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        # self.resize(900, 600)
+        self.resize(900, 600)
 
         #######################################################################
         # APPLY JSON STYLESHEET
@@ -104,6 +104,10 @@ class MainWindow(QMainWindow):
         self.ui.database_search.textChanged.connect(findName)
 
         self.ui.database_table.doubleClicked.connect(on_click)
+
+        # CLOSE CADASTRO DE ITEM
+        self.ui.closeCadastroItemBtn.clicked.connect(
+            lambda: self.ui.addCodeContainer.collapseMenu())
 
 
 # ########################################################################### #
