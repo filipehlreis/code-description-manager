@@ -6,6 +6,7 @@
 # ########################################################################### #
 # IMPORTS
 # ########################################################################### #
+from fbs_runtime.application_context.PyQt5 import ApplicationContext
 from time import sleep
 from PyQt5 import QtCore, QtWidgets
 from threading import Thread
