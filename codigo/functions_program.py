@@ -658,6 +658,7 @@ def export_excel_sheet_omie():
         print('\n' + message)
 
 
+
 # read_omie_sheet()
 """
 This file was created so I could config the virtual enviromment and install

@@ -109,6 +109,54 @@ class MainWindow(QMainWindow):
         self.ui.closeCadastroItemBtn.clicked.connect(
             lambda: self.ui.addCodeContainer.collapseMenu())
 
+        self.ui.saveCadastroItemBtn.clicked.connect(self.salvarCadastroSimples)
+
+    def validaCadastroSimplesPreenchido(self):
+        status = self.ui.addStatusEdit.text().strip().capitalize()
+        codigo: str = self.ui.addCodigoEdit.text().strip()
+        descricao_basico = self.ui.addBasicDescrEdit.text().strip()
+        descricao_completa = self.ui.addFullDescrEdit.text().strip()
+        quantidade = self.ui.addQuantidadeEdit.text().strip()
+        caixa = self.ui.addCaixaEdit.text().strip()
+        prateleira = self.ui.addPrateleiraEdit.text().strip()
+        corredor = self.ui.addCorredorEdit.text().strip()
+
+        # codigo_numerico = codigo.isnumeric()
+        # codigo_tamanho = len(codigo) == 6
+
+        if not (status == 'Ativo' or status == 'Inativo'):
+            print(f'Problemas com Status: "{status}"')
+            return None
+        if not (codigo.isnumeric() and len(codigo) == 6):
+            print(f'Problemas com codigo: "{codigo}"')
+            return None
+        if descricao_basico == '':
+            print(f'Problemas com descricao_basico: "{descricao_basico}"')
+            return None
+        if descricao_completa == '':
+            print(f'Problemas com descricao_completa: "{descricao_completa}"')
+            return None
+        if not quantidade.isnumeric():
+            print(f'Problemas com quantidade: "{quantidade}"')
+            return None
+        if not caixa.isnumeric():
+            print(f'Problemas com caixa: "{caixa}"')
+            return None
+        if not prateleira.isnumeric():
+            print(f'Problemas com prateleira: "{prateleira}"')
+            return None
+        if not corredor.isnumeric():
+            print(f'Problemas com corredor: "{corredor}"')
+            return None
+        return True
+
+    def salvarCadastroSimples(self):
+        if not self.validaCadastroSimplesPreenchido() == None:
+            print('Todos os campos estao preenchidos corretamente.')
+        else:
+            ...
+            # print('Possui erros em algum dos campos.')
+
 
 # ########################################################################### #
 # execute app
